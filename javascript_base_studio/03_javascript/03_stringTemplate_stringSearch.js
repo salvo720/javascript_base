@@ -36,5 +36,14 @@ function prova3() {
     // il metodo e chiamato interpolazione di stringhe 
     // la sintassi e :
 
+    //${ nome variabile }
+
+    let first_name = `nome`;
+    let last_name = `cognome`;
+    let text_prova = ` Welcome ${first_name} , ${last_name} `;
+    window.console.log(text_prova);
+
+
+
 
 }
