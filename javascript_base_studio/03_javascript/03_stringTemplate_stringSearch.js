@@ -128,7 +128,31 @@ function prova3() {
 
     // Precisione fluttuante 
 
+    // L'aritmentica a virgola mobile non e sempre accurata al 100% :
+    let numero_5 = 0.2 + 0.1;
+    window.console.log(`numero_5 :`, numero_5);
 
+    // Per risolvere il problema di cui sopra , e utile moltiplicare e dividere 
+    let numero_6 = (0.2 * 10 + 0.1 * 10) / 10;
+    window.console.log(`numero_6 : `, numero_6);
+
+    // Aggiunta di numeri e stringhe 
+    // ATTENZIONE !!!
+    // javascript usa l'operatore  + sia per la somma che per la concatenazione 
+    // I numeri sono sommati , le stringhe sono concatenate
+
+    //--------------------------------------------------------------------
+
+    let numero_somma_1 = 10;
+    let numero_somma_2 = 20;
+    let risultato_somma = numero_somma_1 + numero_somma_2;
+    window.console.log(`risultato_somma : `, risultato_somma);
+
+    // se aggiungi due stringhe il risultato sara concatenato 
+    let stringa_1 = "10";
+    let stringa_2 = "20";
+    let stringa_somma = stringa_1 + stringa_2;
+    window.console.log(`stringa_somma :`, stringa_somma);
 
 
 }
