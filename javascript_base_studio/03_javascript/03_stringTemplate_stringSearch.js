@@ -136,23 +136,198 @@ function prova3() {
     let numero_6 = (0.2 * 10 + 0.1 * 10) / 10;
     window.console.log(`numero_6 : `, numero_6);
 
+    //--------------------------------------------------------------------
+
     // Aggiunta di numeri e stringhe 
     // ATTENZIONE !!!
     // javascript usa l'operatore  + sia per la somma che per la concatenazione 
     // I numeri sono sommati , le stringhe sono concatenate
 
-    //--------------------------------------------------------------------
 
     let numero_somma_1 = 10;
     let numero_somma_2 = 20;
     let risultato_somma = numero_somma_1 + numero_somma_2;
     window.console.log(`risultato_somma : `, risultato_somma);
 
+    //--------------------------------------------------------------------
+
     // se aggiungi due stringhe il risultato sara concatenato 
     let stringa_1 = "10";
     let stringa_2 = "20";
     let stringa_somma = stringa_1 + stringa_2;
     window.console.log(`stringa_somma :`, stringa_somma);
+
+    //--------------------------------------------------------------------
+
+
+    // se aggiungi un numero e una stringa , il risualto sara una concatenazionee di stringhe 
+    let numero_7 = 10;
+    let stringa_7 = "20";
+    let stringa_somma_7 = numero_7 + stringa_7;
+    window.console.log("stringa_somma_7 :", stringa_somma_7);
+
+    //--------------------------------------------------------------------
+
+    // un errore comune e aspettarsi chee questo risultato sia 30 
+    let numero_8 = 10;
+    let numero_9 = 20;
+    let stringa_8_9 = "The result is " + numero_8 + numero_9;
+    window.console.log("stringa_8_9 :", stringa_8_9);
+
+    //--------------------------------------------------------------------
+
+    // un errore comune e aspettarsi che questo risultato sia 102030
+    let x_10 = 10;
+    let y_11 = 20;
+    let z_12 = "30";
+    let result_10_11_12 = x_10 + y_11 + z_12;
+    window.console.log("result_10_11_12 : ", result_10_11_12);
+
+    // L'interprete javascript funziona da sinistra a destra 
+    // il primo (10 + 20) viene aggiunto perche  x_10 e y_11 sono entrambi numeri 
+    // il secondo 30 + "30" viene concatenato perche z_12 e una stringa 
+
+    //--------------------------------------------------------------------
+
+    //Stringhe numeriche 
+    // le stringhe javascript possono avere contenuto numerico 
+    let x_13 = 100;
+    window.console.log("x_13 :", x_13, " tipo : ", typeof (x_13));
+
+    let y_13 = "100";
+    window.console.log("y_13 :", y_13, " tipo : ", typeof (y_13));
+
+    //javascript provera a convertire le stringhe in numeri in tutte le operazioni numeriche :
+    //Questo (la divisione ) funzionera 
+
+    let x_14 = "100";
+    let y_14 = "10";
+    let z_14 = x_14 / y_14;
+    window.console.log("z_14 : ", z_14, "x e y sono stringhe ");
+
+    //--------------------------------------------------------------------
+
+    //Questo (la moltiplicazione ) funzionera anche : 
+
+    let z_15 = x_14 * y_14;
+    window.console.log("z_15 : ", z_15, "x e y sono stringhe ");
+
+    //--------------------------------------------------------------------
+    // E Questo (la sottrazione ) funzionera anche : 
+
+    let z_16 = x_14 - y_14;
+    window.console.log("z_16 : ", z_16, " x e y sono stringhe ");
+
+    //--------------------------------------------------------------------
+    // Ma Questo(la somma ) non funzionera : 
+
+    let z_17 = x_14 + y_14;
+    window.console.log("z_17 : ", z_17, "x e y sono stringhe ");
+
+    // javascript usa l'operatore + per concatenare le stringhe 
+
+    //--------------------------------------------------------------------
+
+    //NaN non un numero 
+    //NaN e una parola riservata che Javascript e indica che un numero non e legale 
+    //Il tentativo di eseguire aritmetica con una stringa non numerica risultera in NaN (Not a Number (Non un Numero ) )
+
+    let z_18 = x_14 / "Apple ";
+    window.console.log(z_18);
+
+    //--------------------------------------------------------------------
+
+    //Tuttavia se la stringa contiene un valore numerico  , il risultato sara un numero : 
+
+    let z_19 = 100 / "10";
+    window.console.log("z_19 :", z_19, "il dividendo e una stringa numerica");
+
+    //--------------------------------------------------------------------
+
+    // Puoi usare la funzione Javascript globale isNaN() per scoprire se un valore non e un numero : 
+    let z_20 = 100 / "Apple";
+    window.console.log("z_20 : ", z_20, " isNaN : ", isNaN(z_20));
+
+
+    //--------------------------------------------------------------------
+
+    //Fai attenzione a NaN . Se usi NaN in un operazione matematica  , il risultato sara anche NaN : 
+
+    let z_21 = NaN + 5;
+    window.console.log("z_21 : ", z_21);
+
+    //--------------------------------------------------------------------
+
+    //Oppure il risultato potrebbe essere una concatenazione come NaN5 :
+
+    let z_22 = NaN + "5";
+    window.console.log("z_22 : ", z_22);
+
+    //--------------------------------------------------------------------
+
+    //NaN e un numero  : typeof Nan  restituisce number : 
+
+    window.console.log("NaN : ", NaN, "tipo :", typeof (NaN));
+
+    //--------------------------------------------------------------------
+
+    //Infinito 
+    //Infinity e il numero che javascript restituira se calcoli un numero al 
+    //di fuori del numero piu grande possibile . Esempio : 
+    let myNumber = 2;
+    //Execute until infinity 
+    while (myNumber != Infinity) {
+        myNumber = myNumber * myNumber;
+        window.console.log("myNumber : ", myNumber, "tipo : ", typeof (myNumber));
+    }
+
+    //--------------------------------------------------------------------
+
+    // La divisione per 0(zero) genera anche Infinity
+    let z_23 = 2 / 0;
+    window.console.log("z_23 : ", z_23);
+
+    let z_24 = -2 / 0;
+    window.console.log("z_24 : ", z_24);
+
+    //--------------------------------------------------------------------
+    // Infinity e un numero: typeofinfinity restitusce numerico
+
+    window.console.log("Infinity : ", Infinity, " tipo : ", typeof (Infinity));
+
+    //--------------------------------------------------------------------
+
+    // Esadecimale 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    window.console.log();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 }
