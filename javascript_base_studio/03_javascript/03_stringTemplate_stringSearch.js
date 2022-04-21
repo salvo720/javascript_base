@@ -1,5 +1,5 @@
 // w3school tutorial inzio da: JS string template 
-// w3school tutorial fine in : JS string search
+// w3school tutorial fine in : JS Numbers
 
 $(function () {
     console.log("ready!")
@@ -233,7 +233,7 @@ function prova3() {
     //Il tentativo di eseguire aritmetica con una stringa non numerica risultera in NaN (Not a Number (Non un Numero ) )
 
     let z_18 = x_14 / "Apple ";
-    window.console.log(z_18);
+    window.console.log('z_18', z_18);
 
     //--------------------------------------------------------------------
 
@@ -299,6 +299,101 @@ function prova3() {
 
     // Esadecimale 
 
+    // javascript interpreta le costanti numeriche come esadecimali se sono precedute da 0x 
+    let numero_esadecimale = 0xFF;
+    window.console.log("numero_esadecimale : ", numero_esadecimale);
+
+    //--------------------------------------------------------------------
+
+
+    // non scrivere un numeror con uno 0 iniziale ( come 07 ).
+    // alcune versioni di javascript interpretano i numeri come ottali se sono preceduti da uno 0 ;
+
+    // per impostazione predefinita  , Javascript visualizza i numeri come base 10 ( decimali )
+    // Ma puoi usare il metodo toString() , per generare numeri da base2 a base 36
+    // L'esadecimale e in base 16 , il decimale a base 10 , l'otttale a base 8 , il binario a base 2 
+
+    //esempio 
+    let numero_test_32 = 32;
+
+
+    window.console.log("numero_test_32 base 32 : ", numero_test_32.toString(32));
+
+    numero_test_32.toString(16);
+    window.console.log("numero_test_32 base 16 : ", numero_test_32.toString(16));
+
+    numero_test_32.toString(12);
+    window.console.log("numero_test_32 base 12 : ", numero_test_32.toString(12));
+
+    numero_test_32.toString(10);
+    window.console.log("numero_test_32 base 10 : ", numero_test_32.toString(10));
+
+    numero_test_32.toString(8);
+    window.console.log("numero_test_32 base 8 vale : ", numero_test_32.toString(8));
+
+    numero_test_32.toString(2);
+    window.console.log("numero_test_32 base 2 vale : ", numero_test_32.toString(2));
+
+    //--------------------------------------------------------------------
+
+    //Numeri javascript come oggettti
+
+    //normalmente i numeri javascrript sono valori primitivi creati da letterali 
+
+    let numero_test_3 = 123;
+    window.console.log("numero_test_3 vale : ", numero_test_3);
+
+    // Ma i numeri possono anche essere definiti come oggetti con la parola chiave new 
+
+    let numero_test_4 = new Number(123);
+    window.console.log("numero_test_4 vale : ", numero_test_4);
+
+    //Non crearee oggetti numero 
+    // la New parola chiave complica il codice e rallenta la velocita di esecuzione
+    // gli oggetti numerrici possono produrre risultati imprevisti 
+
+    let numero_test_5 = 100
+    let numero_test_6 = new Number(100);
+    window.console.log("numero_test_5 vale : ", numero_test_5, "numero_test_6 vale : ", numero_test_6);
+
+    if (numero_test_5 == numero_test_6) {
+        window.console.log("numero_test_5 e numero_test_6 e true su operazione ==")
+    } else {
+        window.console.log("numero_test_5 e numero_test_6 e false su operazione ==")
+    }
+
+    if (numero_test_5 === numero_test_6) {
+        window.console.log("numero_test_5 e numero_test_6 e true su operazione ===")
+    } else {
+        window.console.log("numero_test_5 e numero_test_6 e false su operazione ===")
+        window.console.log("numero_test_5 e di tipo numerico l'altro (numero_test_6) di tipo oggetto ")
+    }
+
+    //Nota soppra la differenza tra == e === 
+    // == confronta solo i valori 
+    // == confronta i valori e il tipo 
+
+    window.console.log("-------------------------------------------------")
+
+
+    let numero_test_7 = new Number(100);
+    let numero_test_8 = new Number(100);
+    window.console.log("numero_test_7 vale : ", numero_test_7, "numero_test_8 vale : ", numero_test_8);
+
+    if (numero_test_7 == numero_test_8) {
+        window.console.log("numero_test_7 e numero_test_8 e true su operazione ==")
+    } else {
+        window.console.log("numero_test_7 e numero_test_8 e false su operazione ==")
+    }
+
+    if (numero_test_7 === numero_test_8) {
+        window.console.log("numero_test_7 e numero_test_8 e true su operazione ===")
+    } else {
+        window.console.log("numero_test_7 e numero_test_8 e false su operazione ===")
+        window.console.log("numero_test_7 e di tipo numerico l'altro (numero_test_8) di tipo oggetto ")
+    }
+
+    // il confronto di due oggetti javascript restituisce sempre false 
 
 
 
@@ -312,7 +407,11 @@ function prova3() {
 
 
 
-    window.console.log();
+
+
+
+
+
 
 
 
