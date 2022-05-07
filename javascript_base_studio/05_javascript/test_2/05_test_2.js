@@ -79,3 +79,27 @@ var stoleidentity = hero.getsecretIdentity.bind(hero);
 
 window.console.log("cosi worka stoleidentity", stoleidentity());
 window.console.log("cosi worka hero.getsecretIdentity ", hero.getsecretIdentity()); // e il secondo perche e l'ultimo bind 
+
+/* ------------------------------------------------------------------------------------ */
+
+
+function findDup(array) {
+    var obj = {};
+    for (var i = 0; i < array.length; i++) {
+        if (!obj[array[i]]) {
+            obj[array[i]] = 1;
+            console.log("obj", obj)
+            console.log(" obj[array[i]]", obj[array[i]])
+
+        } else {
+            console.log("array", array)
+            return array[i];
+        }
+    }
+}
+console.log(findDup([1, 2, 3, 4, 4]));
+
+/* ------------------------------------------------------------------------------------ */
+
+
+
