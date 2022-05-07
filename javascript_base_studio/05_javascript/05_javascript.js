@@ -11,3 +11,26 @@ console.log('Start script...');
 task('Call an API');
 console.log('Done!');
 
+
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+let length = fruits.length;
+fruits[fruits.length] = "Lemon";
+window.console.log("parte da 0 ", fruits.length);
+
+fruits[6] = "Lemons";
+window.console.log("buco su fruits ", fruits);
+
+
+// esempio codice dichiarativa 
+
+var numeri = [1, 2, 3];
+var newnumbers = numbers.map(function (number)
+numeri di ritorno * 5;
+);
+
+// esempio codice imperativo
+var numeri = [1, 2, 3];
+var newnumbers = [];
+for (var i = 0; i < numbers.length; i++)
+    newnumbers.push(numeri[i] * 5);
+Console.log(newnumbers);
