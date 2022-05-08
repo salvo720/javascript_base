@@ -16,7 +16,16 @@ function tespreadst() {
     window.console.log("myArray : ", myArray_2)
 }
 
-/* ------------------------------------------------------------------------------------ */
+
+/* fifo ------------------------------------------------------------------------------------ */
+
+var array = [1, 2, 3], primosestratto;
+primosestratto = array[0];
+array.shift();
+console.log("primosestratto", primosestratto)
+console.log("array", array)
+
+/*  ------------------------------------------------------------------------------------ */
 
 
 function secret_variable() {
@@ -84,6 +93,7 @@ window.console.log("cosi worka hero.getsecretIdentity ", hero.getsecretIdentity(
 
 
 function findDup(array) {
+    var dup = [];
     var obj = {};
     for (var i = 0; i < array.length; i++) {
         if (!obj[array[i]]) {
@@ -93,20 +103,36 @@ function findDup(array) {
 
         } else {
             console.log("array", array)
-            return array[i];
+            dup.push(array[i]);
         }
     }
+    return dup;
 }
-console.log(findDup([1, 2, 3, 4, 4]));
-
-/* fifo ------------------------------------------------------------------------------------ */
-
-var array = [1, 2, 3], primosestratto;
-primosestratto = array[0];
-array.shift();
-console.log(primosestratto)
-console.log(array)
-
-/*  ------------------------------------------------------------------------------------ */
+console.log(findDup([1, 2, 3, 3, 4, 4]));
 
 
+/* ------------------------------------------------------------------------------------ */
+
+hoistedVariable = 3;
+window.console.log("hoistedVariable", hoistedVariable);
+var hoistedVariable
+
+/* hight order function  ------------------------------------------------------------------------------------ */
+
+function higherOrder(fn) {
+    fn();
+}
+
+higherOrder(function () { console.log("hight order function", "Hello world") });
+
+/* hight order function 2 ------------------------------------------------------------------------------------ */
+
+
+function higherOrder2() {
+    return function () {
+        return "Do something";
+    }
+}
+
+var x = higherOrder2();
+console.log("hight order function 2", x())   // Returns "Do something"
