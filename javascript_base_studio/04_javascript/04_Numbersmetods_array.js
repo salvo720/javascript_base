@@ -105,6 +105,82 @@ function prova3() {
     //--------------------------------------------------------------------
 
     //Metodi javascript globali 
+    // i metodi globali javascript possono essere usatilizzati su tutti i tipi di dati javascript 
+    // Questi sono i piu rilevanti quando si lavora con i numeri 
+
+    // 1) Number : ritorna un numero convertito dal suo argomento 
+    // 2) parseFloat : analizza il suo argomento e ritorna un numero a virgola mobile 
+    // 3) parseInt : analizza il suo argomento e ritorna un numero intero 
+
+    //--------------------------------------------------------------------
+
+    // Number()
+    // Number puo essere utilizzato per convertire le variabili javascript in numeri 
+    window.console.log("Number(true)", Number(true));
+    window.console.log("Number(false)", Number(false));
+    window.console.log("Number('10')", Number("10"));
+    window.console.log("Number('10   ')", Number("10  "));
+    window.console.log("Number(' 10  ')", Number("  10  "));
+    window.console.log("Number('   10')", Number("   10"));
+    window.console.log("Number('10.33')", Number("10.33"));
+    window.console.log("Number('10,33')", Number("10,33"));
+    window.console.log("Number('10 33')", Number('10 33'));
+    window.console.log("Number('Jhon')", Number('Jhon'));
+
+
+    // Se il numbero non puo essere convertito viene restituito NaN , NOT a Number 
+
+    // il metodo Number puo essere usato per convertire le date in numero 
+    window.console.log("Number(new Date('1970-01-01') :", Number(new Date("1970-01-01"))); //0 perche e la data di partenza 
+    // restituisce il numero in millisecondi 
+
+    window.console.log("Number(new Date('01-01-1970') :", Number(new Date("01-01-1970")));
+    window.console.log("new Date('01-01-1970') :", new Date("01-01-1970"));
+
+    // il numero di millisecondi tra 02-01-1970 e 01-01-1970 e  86.400.000:
+    window.console.log("Number(new Date('1970-01-02')) :", Number(new Date("1970-01-02")));
+
+    window.console.log("Number(new Date('1970-01-30')) :", Number(new Date("1970-01-30")));
+
+
+    //--------------------------------------------------------------------
+
+    // parseInt()
+    // parseInt() analizza una stringa e restituisce un numero intero . Gli spazi sono consentiti . Viene restituito solo il primo numero :
+
+
+    window.console.log("parseInt('-10')", parseInt('-10'));
+    window.console.log("parseInt('-10.33')", parseInt('-10.33'));
+    window.console.log("parseInt('10')", parseInt('10'));
+    window.console.log("parseInt('10.33')", parseInt('10.33'));
+    window.console.log("parseInt('10 20 30')", parseInt('10 20 30'));
+    window.console.log("parseInt('10 years')", parseInt('10 years'));
+    window.console.log("parseInt('years 10')", parseInt('years 10'));
+
+    //Se il numero non puo essere convertito viene restituito NaN ( Not a Number )
+
+
+    //--------------------------------------------------------------------
+
+    //parseFloat()
+    //parseFloat() analizza una stringa e restituisce un numero . Gli spazi sono consentiti . Viene restituito solo il primo numero . 
+
+    window.console.log("parseFloat('10')", parseFloat('10'));
+    window.console.log("parseFloat('10.33')", parseFloat('10.33'));
+    window.console.log("parseFloat('10 20 30')", parseFloat('10 20 30 '));
+    window.console.log("parseFloat('10 years')", parseFloat('10 years'));
+    window.console.log("parseFloat('years 10')", parseFloat('years 10'));
+
+    // Se il numero non puo essere convertito , viene restituito NaN (Not a Number )
+
+
+
+
+
+
+
+
+
 
 
 
