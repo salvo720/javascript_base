@@ -173,6 +173,52 @@ function prova3() {
 
     // Se il numero non puo essere convertito , viene restituito NaN (Not a Number )
 
+    //--------------------------------------------------------------------
+
+    // Propieta dei numeri  
+
+    // MAX_VALUE : restituisce il numero piu grande possibile in javascript
+    // MIN_VALUE: ritorna il numero piu piccolepossibile in javascript
+    // POSITIVE_INFINITY : rappresenta l'infinito ( restituito in caso di overflow )
+    // NEGATIVE_INFINITY : rappresenta infinito negativo ( restituito in caso di overflow )
+    // NaN : rappresenta un valore  "Not a Number " 
+
+    //--------------------------------------------------------------------
+
+    // javascript MIN_VALUE E MAX_VALUE 
+    // MAX_VALUE restituisce il numero piu grande possibile in javascript
+    window.console.log("MAX_VALUE :", Number.MAX_VALUE);
+
+    // MIN_VALUE restituisce il numero piu piccolo possibile in javascript 
+    window.console.log("MIN_VALUE :", Number.MIN_VALUE);
+
+    //--------------------------------------------------------------------
+    // javascript POSITIVE_INFINITY
+
+    // POSITIVE_INFINITY viene restituito in caso di overflow 
+    window.console.log("POSITIVE_INFINITY :", Number.POSITIVE_INFINITY);
+    window.console.log("POSITIVE_INFINITY da operazione matematica :", 1 / 0);
+
+    // javascript NEGATIVE_INFINITY 
+    // NEGATIVE_INFINITY viene restituito in caso di overflow 
+    window.console.log("NEGATIVE_INFINITY :", Number.NEGATIVE_INFINITY);
+    window.console.log("NEGATIVE_INFINITY da operazione matematica  :", -1 / 0);
+
+    //--------------------------------------------------------------------
+
+    //javascript NaN 
+    // in javascript NaN e una parola riservata che indica che il numero non e legale 
+    window.console.log("NEGATIVE_INFINITY :", Number.NaN);
+
+
+    // il tentativo di eseguire aritmentica con una stringa non numerica risultera in NaN ( Non un Numero )
+    window.console.log("NEGATIVE_INFINITY :", 100 / "Apple");
+
+    //--------------------------------------------------------------------
+
+
+
+
 
 
 
