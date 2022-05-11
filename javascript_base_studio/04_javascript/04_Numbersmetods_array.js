@@ -208,11 +208,11 @@ function prova3() {
 
     //javascript NaN 
     // in javascript NaN e una parola riservata che indica che il numero non e legale 
-    window.console.log("NEGATIVE_INFINITY :", Number.NaN);
+    window.console.log("NaN :", Number.NaN);
 
 
     // il tentativo di eseguire aritmentica con una stringa non numerica risultera in NaN ( Non un Numero )
-    window.console.log("NEGATIVE_INFINITY :", 100 / "Apple");
+    window.console.log("NaN da operazione matematica  :", 100 / "Apple");
 
     //--------------------------------------------------------------------
 
