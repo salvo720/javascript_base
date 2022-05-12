@@ -297,6 +297,11 @@ function prova3() {
 
     //--------------------------------------------------------------------
     // Accedi all'array completo 
+    // con javascript , e possibile accedere all'intero array facendo riferimento al nome dell'array : 
+    const cars_8 = ["Saab", "Volvo", "BMW"];
+    // document.getElementById("demo").innerHTML = cars_8 ; //JAVASCRIPT 
+
+    //--------------------------------------------------------------------
 
 
 
