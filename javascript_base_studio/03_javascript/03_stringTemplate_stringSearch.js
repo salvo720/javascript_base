@@ -371,7 +371,7 @@ function prova3() {
 
     //Nota soppra la differenza tra == e === 
     // == confronta solo i valori 
-    // == confronta i valori e il tipo 
+    // === confronta i valori e il tipo 
 
     window.console.log("-------------------------------------------------")
 
@@ -394,39 +394,6 @@ function prova3() {
     }
 
     // il confronto di due oggetti javascript restituisce sempre false 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 }

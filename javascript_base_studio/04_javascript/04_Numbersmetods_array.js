@@ -216,6 +216,91 @@ function prova3() {
 
     //--------------------------------------------------------------------
 
+    // le propieta dei numeri non possono essere utilizzate sulle variabili 
+    // Le propieta del numero appartengono al wrapper dell'oggeto numero di javascript chiamato Number 
+    // E possibile accedere a queste propietasolo come Number.MAX_VALUE
+    // Utilizzando myNumber.MAX_VALUE , dove myNumber e una variabile , un'espressione o un valore , restituira undefined : 
+
+    let mynumber_12 = 6;
+    window.console.log("mynumber_12 :", mynumber_12);
+    window.console.log("mynumber_12.MAX_VALUE :", mynumber_12.MAX_VALUE);
+
+    //--------------------------------------------------------------------
+    // Array / Matrici
+    // un array e una varaibile speciale che puo contenere piu di un valore 
+    const cars = ["Saab", "Volvo", "BMW"];
+    // Perche usare gli array 
+    // Se hai un elenco di elementi( elenco di nomi di auto , ad esempio ), la memorizzazione delle auto in singole variabili potrebbe essere simile a questo :
+    var auto_1 = "Saab";
+    var auto_2 = "Volvo";
+    var auto_3 = "BMW";
+
+    // Tuttavia , cosa succede se si desidera scrorrere le auto e trovarne una specifica ? E se non avessi 3 macchine , ma 300 ? 
+    // la soluzione e un array 
+    // un array puo contenere molti valori sotto un unico nome e puoi accedere ai valori facendo riferimento a un numero di indice 
+
+    //--------------------------------------------------------------------
+    // Creazione di una matrice 
+    // L'uso di valore letterale array e il modo piu semplice per creare un array Javascript 
+    // Sintassi
+    const array_name = ["item1", "item2"];
+
+    // E pratica comune dichiarare un array con la parola chiave const 
+
+    const cars_2 = ["Saab", "Volvo", "BMW"];
+
+    // gli spazi e le interruzioni di riga non sono importanti . una dichiarazione puo estendersi su piu righe : 
+    const cars_3 = [
+        "Saab",
+        "Volvo",
+        "BMW",
+    ];
+
+    // puoi anche creare un array e fornire gli elementi 
+    const cars_4 = [];
+    cars_4[0] = "Saab";
+    cars_4[1] = "Volvo";
+    cars_4[2] = "BMW";
+
+    window.console.log("cars_4 :", cars_4);
+    //--------------------------------------------------------------------
+    // Utilizzandola parola chiave Javascript new
+    // L'esempi seguente crea anche un array e gli assegna valori 
+
+    const cars_5 = new Array("Saab", "Volvo", "BMW");
+
+    window.console.log("cars_5 :", cars_5);
+
+    // i due esempi sopra fanno esattamente lo stesso 
+    // Non c'e bisogno di usare new Array()
+    // Per semplicita, leggibilita ed velocita di esecuzione , utilizza il metodo letter new Array()
+
+    //--------------------------------------------------------------------
+
+    // accesso agli elementi di un array 
+    // Si accede ad un elemento dell'array , facendo riferimento al numero indice : 
+    const cars_6 = ["Saab", "Volvo", "BMW"];
+    let cars_variabile = cars_6[0];
+    window.console.log("cars_6 :", cars_6);
+    window.console.log("cars_variabile :", cars_variabile);
+
+    // Nota : gli elementi dell'array iniziano da 0 
+    // [0]e il primo elemento. [1] e il secondo elemento 
+
+    //--------------------------------------------------------------------
+    // Modifica di un elemento in un array
+    // questa instruzionecambiera il valoredel primo elementoin cars 
+    const cars_7 = ["Saab", "Volvo", "BMW"];
+    cars_7[0] = "Opel";
+
+    window.console.log("cars_7 :", cars_7);
+
+    //--------------------------------------------------------------------
+    // Accedi all'array completo 
+
+
+
+
 
 
 
