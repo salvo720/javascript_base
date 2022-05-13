@@ -303,6 +303,127 @@ function prova3() {
 
     //--------------------------------------------------------------------
 
+    // gli array sono oggetti 
+    // gli array sono un tipo speciale di oggetti . In javascript l'operatore typeof  restituisce oggetto  per gli array
+    // Ma gli array javascript sono megli descritti come array 
+    // gli array usano i numeri per accedere ai suoi elementi , nell'esempio person[0] restituisce jhon 
+
+    // Array
+    const person = ["Jhon", "Doe", 46];
+    window.console.log("typeof di array  :", typeof (person));
+    window.console.log("person[0]  :", person[0]);
+
+
+    // Oggetto
+    // gli oggetti usano i nomi per accedere ai suoi "membri" . In questo esempio person.firstname restituisce Jhon 
+    const person_2 = { firstname: "Jhon", lastname: "Doe", age: 46 }
+    window.console.log("typeof di oggetto  :", typeof (person_2));
+    window.console.log("person.firstname  :", person_2.firstname);
+
+    //--------------------------------------------------------------------
+    // Gli elementi della matrice possono essere oggetti . Gli array sono tipi speciali di oggetti 
+    // Per questo motivo puoi avere variabili di tipo diverso nello stesso array 
+    // puoi avere oggetti in un array . Puoi avere funzioni in un array . Puoi avere un array in un array : 
+
+    const cars_9 = ["Saab", "Volvo", "BMW"];
+
+    const array_2 = [];
+    array_2[0] = Date.now;
+    array_2[1] = function_test;
+    array_2[2] = cars_9;
+
+    function function_test() {
+        window.console.log("function_test");
+    }
+
+    window.console.log("array_2  :", array_2);
+    window.console.log("array_2  :", function_test);
+
+    //--------------------------------------------------------------------
+    // Propieta e metodi dell'array 
+    // Il vero punto di forza degli array javascript sono le propieta e i metodi dell'array integrati 
+
+    const cars_10 = ["Saab", "Volvo", "BMW"];
+    window.console.log("cars_10.length  :", cars_10.length);
+    window.console.log("cars_10.sort()  :", cars_10.sort());
+
+    //--------------------------------------------------------------------
+
+    // funzioni sugli array 
+
+    var array_of_functions = [
+        first_function,
+        second_function,
+
+    ];
+
+    function first_function() {
+        window.console.log("first_function executed");
+    }
+    function second_function() {
+        window.console.log("second_function executed");
+    }
+
+    window.console.log("array_of_functions  :", array_of_functions);
+    // e undefined ma alla riga sopra possiamo notare un console.log dove e stata eseguita la funzione richiamata 
+    window.console.log("array_of_functions  :", array_of_functions[0]());
+
+    // esegui un array di funzioni codice esempio : 
+
+    for (let i = 0; i < array_of_functions.length; i++) {
+        // get the current function getting looped
+        const func = array_of_functions[i];
+
+        // call the function
+        func();
+    }
+
+    //--------------------------------------------------------------------
+
+    // La propieta di lunghezza 
+    // la length propieta di un array restituisce la lunghezza di un array ( il numero di elementi di un array ) .
+
+    // Esempio 
+    const fruit_2 = ["Banana", "Orange", "Apple", "Mango"];
+    let length_array = fruit_2.length;
+
+    window.console.log("fruit_2  :", fruit_2);
+    window.console.log("length_array  :", length_array);
+
+    // la lenght propieta e sempre 1 in piu rispetto all'elemento piu grande dell'array , 
+    // cioe , ad esempio : ultimo elemento e all'indice 3 , quindi 3+1 = length array 
+
+    //--------------------------------------------------------------------
+
+    // Accesso al primo elemento dell'array 
+    // codice esempio 
+    const fruit_3 = ["Banana", "Orange", "Apple", "Mango"];
+    let fruit_3_elemento_1 = fruit_3[0];
+    window.console.log("fruit_3  :", fruit_3);
+    window.console.log("fruit_elemento_1  :", fruit_3_elemento_1);
+
+    //--------------------------------------------------------------------
+
+    // accesso all'ultimo elemento dell'array 
+
+    const fruit_4 = ["Banana", "Orange", "Apple", "Mango"];
+    let fruit_4_elemento_ultimo = fruit_4[fruit_4.length - 1];
+    window.console.log("fruit_3  :", fruit_4);
+    window.console.log("fruit_elemento_1  :", fruit_4_elemento_ultimo);
+
+    //--------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
