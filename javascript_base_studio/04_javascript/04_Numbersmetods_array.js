@@ -1,5 +1,5 @@
-// w3school tutorial inzio da: JS string template 
-// w3school tutorial fine in : JS Numbers
+// w3school tutorial inzio da: JS Numbers
+// w3school tutorial fine in : JS Arrays 
 
 $(function () {
     console.log("ready!")
@@ -549,37 +549,33 @@ function prova3() {
 
     //--------------------------------------------------------------------
     // Come riconosce un array 
+    // una domanda comune e come faccio a capire se una variabile e un array ? 
+    // Il problema e che l'operatore Javascript typeof() restituisce "object"
 
+    const fruit_10 = ["Banana", "Orange", "Apple"];
+    let type = typeof fruit_10
+    window.console.log(" fruit_10 :", fruit_10);
+    window.console.log(" type fruit_10 :", type);
 
+    // L'operatore typeof restituisce oggetto perche un array javascript e un oggetto 
 
+    // Soluzione 1 : 
+    // Per risolvere questo problema L'ecma Script 5 (2009) ha definitoo un nuovo metodo Array.isArray() : 
+    Array.isArray(fruit_10);
+    window.console.log(" Array.isArray(fruit_10) :", Array.isArray(fruit_10));
+    const person_5 = {}
+    person_5["firstname"] = "Jhon"
+    person_5["lastname"] = "Doe"
+    person_5["age"] = 46
 
+    window.console.log(" Array.isArray(person_5) :", Array.isArray(person_5));
 
+    // Soluzione 2 L'instance of costruttore restituisce true se un oggetto viene creato da un determinato costruttore :
+    window.console.log(" fruit_10 instanceof Array :", fruit_10 instanceof Array);
+    window.console.log(" fruit_10 instanceof Object :", fruit_10 instanceof Object);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    window.console.log(" person_5 instanceof Array :", person_5 instanceof Array);
+    window.console.log(" person_5 instanceof Object :", person_5 instanceof Object);
 
 
 
