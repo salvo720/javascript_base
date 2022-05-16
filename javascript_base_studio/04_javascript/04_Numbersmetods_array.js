@@ -413,6 +413,150 @@ function prova3() {
 
     //--------------------------------------------------------------------
 
+    // Elementi di array loop 
+    const fruit_5 = ["Banana", "Orange", "Apple", "Mango"];
+    let fruit_length = fruit_5.length;
+
+    let text_fruit = "<ul>";
+    for (let i = 0; i < fruit_length; i++) {
+        text_fruit += "<li>" + fruit_5[i] + "</li>"
+    }
+    text_fruit += "</ul>";
+    window.console.log(text_fruit);
+
+
+    // possiamo anche usare la array foreach() funzione 
+
+    const fruit_6 = ["Banana", "Orange", "Apple", "Mango"];
+    let text_fruit_6 = "<ul>"
+    fruit_6.forEach(my_function_test);
+    text_fruit_6 += "</ul>"
+
+    function my_function_test(value) {
+        text_fruit_6 += "<li>" + value + "</li>"
+    }
+
+    window.console.log("fruit_6 :", fruit_6);
+    window.console.log("text_fruit_6 :", text_fruit_6);
+
+    //--------------------------------------------------------------------
+
+    // Aggiunta di elementi all'array 
+    const fruit_7 = ["Banana", "Orange", "Apple", "Mango"];
+    fruit_7.push("Lemon"); // add new element lemon to fruit_7 
+    window.console.log("fruit_7 :", fruit_7);
+
+    // oppure usiamo la lenght propieta 
+    const fruit_8 = ["Banana", "Orange", "Apple", "Mango"];
+    fruit_8[fruit_8.length] = "Lemon";
+    window.console.log("fruit_8 :", fruit_8);
+
+    // ATTENZIONE : l'aggiunta di elementi cou un indice elevato puo creare "buchi" non definiti in un array  : 
+    const fruit_9 = ["Banana", "Orange", "Apple", "Mango"];
+    fruit_9[6] = "Lemon"; //Crea dei buchi indefinity fruit 
+    window.console.log("fruit_9 :", fruit_9);
+    window.console.log("fruit_9[5] :", fruit_9[5]);
+
+    //--------------------------------------------------------------------
+    // Array associativi 
+    // Molti linguaggi di programmazione supportano array con indici denominali ( indici letterali )
+    // gli array con indici denominati sono chiamati array associativi ( o hash ).
+    // Javascript non supporta gli array con indici denominati 
+    // in Javascript gli array utilizzano sempre indici numerati 
+
+    // Esempio :
+
+    const person_3 = [];
+    person_3[0] = "Jhon";
+    person_3[1] = "Doe";
+    person_3[2] = 46;
+    window.console.log(" person_3.lenght :", person_3.lenght);
+    window.console.log(" person_3[0] :", person_3[0]);
+
+    // AVVERTIMENTO : Se utilizzi indici denominati , Javascript ridefinira l'array in un oggetto 
+    // Successivamente alucni metodi e propieta dell'array produrranno risultati errati 
+    // Esempio 
+
+    const person_4 = [];
+    person["firstname"] = "Jhon"
+    person["lastname"] = "Doe"
+    person["age"] = 46
+    window.console.log(" person_4.length :", person_4.length);
+    window.console.log(" person_4[0] :", person_4[0]);
+
+    //--------------------------------------------------------------------
+
+    // La differneza tra array e oggetti
+    // In javascriptgli array usano gli indici numerati.
+    // in Javascript gli oggetti usano gli indici denominati ( indici letterali )
+
+    // ATTENZIONE: gli array sono un tipo speciale do oggetti , con indici numerati 
+
+    //--------------------------------------------------------------------
+    // Quando usare gli array e quando usare gli oggetti 
+    // javascript non supporta gli array associativi 
+    // dovresti usare gli oggetti quando vuoi che i nomi degli elementi siano stringhe (testo) 
+    // Dovresti usare gli array quando vuoi che gli indici siano numeri 
+
+    //--------------------------------------------------------------------
+
+    // Javascript nuovo array 
+
+    // Javascript ha un costruttore di array integrato new Array()
+    // Ma puoi tranquillamente usare [] invece 
+    // questi 2  esempi creano esattamente un array vuoto : 
+
+    const array_10 = new Array();
+    const array_11 = [];
+    window.console.log(" array_10 :", array_10);
+    window.console.log(" array_11 :", array_11);
+
+    // queste due affermazioni creano un array contenete 6 numeri esempio : 
+
+    const array_12 = new Array(40, 100, 1, 5, 25, 10);
+    const array_13 = [40, 100, 1, 5, 25, 10];
+
+    window.console.log(" array_12 :", array_12);
+    window.console.log(" array_13 :", array_13);
+
+    // la new parola chiave puo produrre alcuni risultati inaspettati 
+    // crea un array con 3 elementi 
+    const array_14 = new Array(40, 100, 1)
+    window.console.log(" array_14 :", array_14);
+
+    // crea un array con due elementi 
+    const array_15 = new Array(40, 100)
+    window.console.log(" array_15 :", array_15);
+
+    // dovrebbe creare un array con un elemento ma non e cosi 
+    const array_16 = new Array(40)
+    window.console.log(" array_16 :", array_16);
+    // se a new array gli passi solo 1 parametro andra a creare un con tante posizione undefined fino ad arrivare al numero del parametro 
+
+    // un errore comune , questi due pezzi di codice non sono uguali 
+    // esempio 1 :
+    const array_17 = [40];
+    // non e guale ad 
+    // esempio 2 :
+    const array_18 = new Array(40);
+
+
+    // esempio 1 crea un array con un elemento  
+    const array_19 = [40];
+
+    // esempio 2 crea un array con 40 undefined elementi 
+    const array_20 = new Array(40);
+
+    //--------------------------------------------------------------------
+    // Come riconosce un array 
+
+
+
+
+
+
+
+
 
 
 
