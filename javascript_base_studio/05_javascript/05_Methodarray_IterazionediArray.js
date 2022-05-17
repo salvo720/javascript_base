@@ -81,5 +81,65 @@ function prova3() {
     //--------------------------------------------------------------------
 
     // Elementi che cambiano 
+    // Gli elementi dell'array sono accessibili usando il loro numero indice : 
+    // Gli indici di array iniziano con 0 
+    // [0] e il primo elemento 
+    // [1] e il secondo 
+    // [2] e il terzo e cosi via ...
+    // esempio : 
+    const fruit_7 = ["Banana", "Orange", "Apple", "Mango"];
+    fruit_7[0] = "kiwi";
+    window.console.log("fruit_7", fruit_7);
+
+    //--------------------------------------------------------------------
+
+    // Javascript lunghezza della Matrice 
+    const fruit_8 = ["Banana", "Orange", "Apple", "Mango"];
+    fruit_8[fruit_8.length] = "kiwi";
+    window.console.log("furit_8", fruit_8);
+
+    //--------------------------------------------------------------------
+
+    // Array Javascript Delete 
+    // AVVERTIMENTO !
+    //  Gli elementi dell'array possono essere eleminati utilizzando l'operatore Javascript Delete .
+    // Usare i delete lascera dei buchi , che saranno undefined nell'array 
+    // e buona patrica usare pop o shift  
+    // esempio :
+    const fruit_9 = ["Banana", "Orange", "Apple", "Mango"];
+    delete fruit_9[0];
+    window.console.log("fruit_9 delete ", fruit_9);
+    window.console.log("fruit_9[0] elemento eliminato con delete", fruit_9[0]);
+
+    //--------------------------------------------------------------------
+    // Unione concatenazione di array 
+    // il concat() metodo crea un nuovo array unendo( concatenando ) gli array esistenti :
+    // esempio :
+    const myGirls = ["Cecilie", "Lone"];
+    const myBoys = ["Emil", "Tobias", "Linus"];
+
+    const myChildren = myGirls.concat(myBoys);
+    window.console.log(" mychildren ", myChildren);
+
+    // il metodo concat() non modifica gli array esistenti  . Restituisce sempre un nuovo array 
+    // il concat() metodo puo accettare un numero quasiasi di argomenti dell'array 
+    // Esempio (unione di tre array ) :
+    const array_1 = ["Cecilie", "Lone"];
+    const array_2 = ["Emil", "Tobias", "Linus"];
+    const array_3 = ["Robin", "Morgan"];
+    const myChildren_2 = array_1.concat(array_2, array_3);
+    window.console.log("myChildren_2 conca 2 array  :", myChildren_2)
+
+    // Il concat() metodo puo accettare stringhecome argomenti 
+
+    const array_4 = ["Emil", "Tobias", "Linus"];
+    const array_5 = array_4.concat("Peter");
+    window.console.log("array_5 concat stringa :", array_5);
+
+    //--------------------------------------------------------------------
+
+    // splicing and slicing array 
+
+
 
 }
