@@ -223,13 +223,15 @@ function prova3() {
     // Questo e il caso in cui si tenta di generare un array 
     // Questi due esempi produrrano lo stesso risultato :
     const fruit_18 = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
-    const fruit_18_string = fruit_18.toString(2);
+    let fruit_18_string = fruit_18.toString();
 
     window.console.log("fruit_18", fruit_18);
     window.console.log("fruit_18_string", fruit_18_string);
 
     const fruit_19 = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
-    document.getElementById("demo").innerHTML = fruit_19
+    document.getElementById("id_div_demo").innerHTML = fruit_19
+    window.console.log("fruit_19", fruit_18);
+
 
     // Nota tutti gli oggetti Javascript hanno un metodo toString()
 
