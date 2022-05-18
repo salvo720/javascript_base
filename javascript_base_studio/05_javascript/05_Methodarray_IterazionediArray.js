@@ -137,8 +137,109 @@ function prova3() {
     window.console.log("array_5 concat stringa :", array_5);
 
     //--------------------------------------------------------------------
-
     // splicing and slicing array 
+
+    // lo splice() metodo aggiunge nuovi elementi ad una amtrice 
+
+    // lo slice() metodo taglia un pezzo di array 
+
+    //--------------------------------------------------------------------
+
+    // Jascript array splice 
+
+    // lo splice() metodo puo essere utilizzato per aggiungere nuovi elementi a un array :
+    const fruit_10 = ["Banana", "Orange", "Apple", "Mango"];
+    fruit_10.splice(2, 0, "Lemon", "Kiwi");
+    window.console.log("fruit_10 slice()", fruit_10);
+
+    // il primo parametro (2) definisce la posizione in cui devono essere aggiunti i nuovi elementi 
+    // il secondo parametro (0) definisce quanti elementi devono essere rimossi 
+    // il resto dei parametri("Limone", "Kiwi") definiscei nuovi elementida aggiungere 
+    // lo splice metodo restituisce un array con gli elementi eliminati
+
+    // il metodo splice rimuove gli elemnti partendo dalla fine
+
+    const fruit_11 = ["Banana", "Orange", "Apple", "Mango"];
+    let splice_result = fruit_11.splice(2, 2, "Lemon", "Kiwi");
+    window.console.log("fruit_11 slice()", fruit_11);
+    window.console.log("splice_result", splice_result);
+
+    const fruit_12 = ["Banana", "Orange", "Apple", "Mango"];
+    let array_fruit = ["Kiwi", "Lemon"];
+    fruit_12.splice(0, 0, array_fruit);
+    window.console.log("fruit_12 splice con array", fruit_12);
+    // se usi lo splice con un array , aggiungerai un array 
+    // alla posizione del primo parametro dello slice  
+
+    //--------------------------------------------------------------------
+    // Utilizzo dello splice() per rimuovere elementi 
+    const fruit_13 = ["Banana", "Orange", "Apple", "Mango"];
+    fruit_13.splice(0, 1);
+
+    window.console.log("fruit_13", fruit_13);
+    // il primo parametro (0) definisce la posizione in cui devono essere aggiunti nuovi elementi(uniti)
+    // il secondo parametro (1) definisce quanti elementi devono essere rimossi 
+    // il resto dei parametri viene omesso .Non verranno aggiunti nuovi elementi 
+
+    //--------------------------------------------------------------------
+
+    // Jascript array slice()
+    //  lo slice() metodo tagli un array in un nuovo array .
+
+    // questo esempio tagli una parte di array a partire dall'elemento 1("Arancione")
+    const fruit_14 = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+    const taglio_array_1 = fruit_14.slice(1);
+    window.console.log("fruit_14", fruit_14);
+    window.console.log("array_1 da taglio fruit_14 dal 1", taglio_array_1);
+
+    // il metodo slice() crea un nuovo array 
+    // lo slice() metodo non rimuove alcun elemento dell'array di origine 
+
+    //  Questo esempio taglia una parte di array a partire dall'elemeto dell'array 3  ("Apple")
+    const fruit_15 = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+    const taglio_array_3 = fruit_15.slice(3);
+
+    window.console.log("fruit_15", fruit_15);
+    window.console.log("array_1 da taglio fruit_15 dal 3", taglio_array_3);
+
+    // lo slice metodo puo accettare due argomenti come slice(1,3)
+    // il metodo quindi seleziona gli elementi dell'argomento iniziale e fino a ( ma escuso) ,l'argomento finale 
+
+    const fruit_16 = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+    const taglia_array_1_3 = fruit_16.slice(1, 3);
+    window.console.log("fruit_16", fruit_16);
+    window.console.log("taglia_array_1_3 da taglio fruit_16 da 1 a 3(escluso l'ultimo)", taglia_array_1_3);
+
+    // se l'agomento viene omesso lo slice() metodo  tagliera fino al resto dell'array 
+
+    const fruit_17 = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+    const taglia_array_2 = fruit_17.slice(2);
+    window.console.log("fruit_17", fruit_17);
+    window.console.log("taglia_array_2 da taglio fruit_16 da 2 a ultimo (incluso)", taglia_array_2);
+
+    //--------------------------------------------------------------------
+    // toString automatico()
+    // Javascript converte automaticamente un array in una stringa separata da virgolette quando e previsto un valore primitivo 
+    // Questo e il caso in cui si tenta di generare un array 
+    // Questi due esempi produrrano lo stesso risultato :
+    const fruit_18 = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+    const fruit_18_string = fruit_18.toString(2);
+
+    window.console.log("fruit_18", fruit_18);
+    window.console.log("fruit_18_string", fruit_18_string);
+
+    const fruit_19 = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+    document.getElementById("demo").innerHTML = fruit_19
+
+    // Nota tutti gli oggetti Javascript hanno un metodo toString()
+
+    //--------------------------------------------------------------------
+    // Trovare i valori massimi e i valori minimi su una matrice 
+    // Non ci sono funzioni per trovare il valore massimo o il valore minimo su una matrice
+
+    //--------------------------------------------------------------------
+    // ordinamento di una matrice 
+
 
 
 
