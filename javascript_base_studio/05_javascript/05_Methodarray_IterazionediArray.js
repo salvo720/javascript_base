@@ -296,6 +296,58 @@ function prova3() {
 
     //--------------------------------------------------------------------
     // Ordinamento di una matrice in ordine casuale 
+    const punteggio_3 = [40, 100, 1, 5, 25, 10];
+    punteggio_3.sort(function (a, b) { return 0.5 - Math.random() });
+    window.console.log("punteggio_3", punteggio_3)
+
+    //--------------------------------------------------------------------
+    // il metodo fisher yates 
+    // l'esempio sopra  , array.sort() , non e accurato e favorira alcuni elementi rispetto ad altri .
+    //  il metodo piu popolare, e chiamato fisher Yates shuffle , ed e stato introdotto nella scienza dei dati gia da 1938 
+    // in Javascript il metodo puo essere traddo in questo 
+    const punteggio_4 = [40, 100, 1, 5, 25, 10]
+    for (let i = punteggio_4.length - 1; i > 0; i--) {
+
+        let j = Math.floor(Math.random() * i);
+        let k = punteggio_4[i];
+        window.console.log("fisher yates shuffle j :", j);
+        window.console.log("fisher yates shuffle k :", k);
+
+        punteggio_4[i] = punteggio_4[j]
+        punteggio_4[j] = k;
+
+        window.console.log("punteggio_4[i]:", punteggio_4[i]);
+        window.console.log("punteggio_4[j]:", punteggio_4[j]);
+    }
+    window.console.log("punteggio_4 :", punteggio_4);
+
+    //--------------------------------------------------------------------
+    // Trova il valore dell'array piu alto 
+    // Non ci sono funzioni integrate per trovare il massimo o il minimo in una matrice 
+    // Tuttavia dopo aver ordinato una matrice  , e possibile utilizzare l'indice per ottenere i valori piu alti e i piu bassi 
+    // ordinamento crescente 
+    const punteggio_5 = [40, 100, 1, 5, 25, 10];
+    punteggio_5.sort(function (a, b) { return a - b });
+    window.console.log("punteggio_5 ", punteggio_5);
+    window.console.log("punteggio_5[0] contiene il valore piu piccolo ", punteggio_5[0]);
+    window.console.log("punteggio_5[punteggio_5.length -1 ] continene il valore piu grande ", punteggio_5[punteggio_5.length - 1]);
+
+    // punteggio_5[0] contiene il valore piu piccolo 
+    // punteggio_5[punteggio_5.length -1 ] continene il valore piu grande 
+
+    // ordinamento descrescente 
+    const punteggio_6 = [40, 100, 1, 5, 25, 10]
+    punteggio_6.sort(function (a, b) { return b - a })
+    window.console.log("punteggio_6 ", punteggio_6);
+    window.console.log("punteggio_6[0] continene il valore piu grande  ", punteggio_6[0]);
+    window.console.log("punteggio_6[punteggio_6.lenght -1 ] punteggio piu piccolo", punteggio_6[punteggio_6.length - 1]);
+    // punteggio_6[0] continene il valore piu grande 
+    // punteggio_6[punteggio_6.lenght -1 ] punteggio piu piccolo 
+
+
+
+
+
 
 
 
