@@ -1,5 +1,5 @@
 // w3school tutorial inzio da: JS Array Method 
-// w3school tutorial fine in : JS Array Iteration  
+// w3school tutorial fine in : JS Array Sort  
 
 $(function () {
     console.log("ready!")
@@ -344,9 +344,117 @@ function prova3() {
     // punteggio_6[0] continene il valore piu grande 
     // punteggio_6[punteggio_6.lenght -1 ] punteggio piu piccolo 
 
+    // ATTENZIONE : l'ordinamento dell'array e un modo molto inefficente se si desidera solo trovare il valore piu alto ( o il piu basso )
+
+    //--------------------------------------------------------------------
+
+    // Utilizzo mi Math.max() su un array 
+    // puoi usare Math.max.apply per trovare il numero piu alto in un array 
+    // esempio : 
+    function myArrayMax(array) {
+        return Math.max.apply(null, array);
+    }
+
+    const punteggio_7 = [40, 100, 1, 5, 25, 10];
+    myArrayMax(punteggio_7);
+    window.console.log("myArrayMax(punteggio_7) : ", myArrayMax(punteggio_7));
+
+    // Math.max.apply(null, [1, 2, 3]) e equivalente a Math.max(1, 2, 3) .
+
+    function myArrayMax_2(param1, param2, param3) {
+        return Math.max(param1, param2, param3);
+    }
+
+    myArrayMax_2(punteggio_7[0], punteggio_7[1], punteggio_7[2]);
+    // window.console.log("myArrayMax(punteggio_7) : ", myArrayMax(punteggio_7[0], punteggio_7[1], punteggio_7[2]));
+    // Math.max() non accetta array ma solo valori singoli 
 
 
+    //--------------------------------------------------------------------
 
+    // Utilizzo di Math.min su un array 
+    // puoi utilizzare Math.min.apply su un array per trovare il valore piu basso 
+    // esempio : 
+
+    function myArrayMin(array) {
+        return Math.min.apply(null, array);
+    }
+
+    const punteggio_8 = [40, 100, 1, 5, 25, 10];
+    myArrayMin(punteggio_8);
+    window.console.log("myArrayMin(punteggio_8); :", myArrayMin(punteggio_8));
+
+    // Math.min.apply(null, [1, 2, 3]) e equivalente aMath.min(1, 2, 3). 
+
+    function myArrayMin_2(param1, param2, param3) {
+        return Math.min(param1, param2, param3);
+    }
+
+    myArrayMin_2((punteggio_8[0], punteggio_8[1], punteggio_8[2]));
+    window.console.log("myArrayMin_2(punteggio_8); :", myArrayMin_2(punteggio_8[0], punteggio_8[1], punteggio_8[2]));
+    // Math.min() non accetta array ma solo valori singoli 
+    //--------------------------------------------------------------------
+
+    // i metodi javascript min/max 
+    // la soluzione piu veloce ed efficente e utilizzare un metodo "fatto in casa"
+    // questa funzione scorre gli elementi dell'array confrontatndo ogni valore 
+    // Trova il valore massimo esempio :
+    function myArrayMax_custom(array) { //metodo fatto in casa 
+        let len = array.length;
+        let max = -Infinity;
+        while (len--) {
+            if (array[len] > max) {
+                max = array[len];
+            }
+        }
+        return max;
+    }
+
+    const punteggio_9 = [40, 100, 1, 5, 25, 10];
+    window.console.log("myArrayMax_custom(punteggio_9) , metdo fatto in casa ", myArrayMax_custom(punteggio_9));
+
+    // Questa funzione scorre un array confrontando ogni valore con il valore piu basso trovato 
+    // Trova il minimo  esempio : 
+
+    function myArrayMin_custom(array) {
+        let len = array.length;
+        let min = Infinity;
+        while (len--) {
+            if (array[len] < min) {
+                min = array[len];
+            }
+        }
+        return min;
+    }
+
+    const punteggio_10 = [40, 100, 1, 5, 25, 10];
+    window.console.log("myArrayMin_custom(punteggio_10):", myArrayMin_custom(punteggio_10));
+    //--------------------------------------------------------------------
+    // Ordinamento di array di oggetti
+    const cars = [
+        { type: "Volvo", year: 2016 },
+        { type: "Saab", year: 2001 },
+        { type: "BMW", year: 2010 },
+    ];
+
+    // anche se gli oggetti hanno propieta di tipi di dati diversi , il sort() puo essere usato per ordinare gli array .
+    // la soluzione e scrivere una funzione di controllo per confrontare i valori della propieta :
+    cars.sort(function (a, b) { return a.year - b.year });
+    window.console.log("cars dopo sort :", cars);
+
+    // il confronto delle propieta delle stringhe e un po piu complesso 
+    const cars_2 = [
+        { type: "Volvo", year: 2016 },
+        { type: "Saab", year: 2001 },
+        { type: "BMW", year: 2010 },
+    ];
+    cars_2.sort(function (a, b) {
+        let x = a.type.toLowerCase();
+        let y = b.type.toLowerCase();
+        if (x > y) { return -1 }
+        if (x < y) { return 1 }
+        return 0;
+    })
 
 
 
