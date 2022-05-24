@@ -157,6 +157,85 @@ function prova3() {
     // testa la condizione su tutti gli elementi se non la passano ritorna false 
     //--------------------------------------------------------------------
     // Javascript array same 
+    // il some() metodo controllase alcuni valori dell'array superano un test .
+
+    // Questo esempio controlla se alcuni valori dell'array sono maggiori di 18 . 
+
+    const numeri_12 = [45, 4, 9, 16, 25];
+    let some_over18 = numeri_12.some(myFunction_custom_8);
+
+    function myFunction_custom_8(value) {
+        return value > 18
+    }
+
+    window.console.log("some_over18 :", some_over18);
+    // ritorna true se la condizione e soddisfatta , ovvero some(alcuni) elementi dell'array e maggiore di 18 
+    //--------------------------------------------------------------------
+    // Matrice /Array javascript indexof()
+    // indexof() metodo ricerca in una matrice un valore di un elemento e ne restituisce la posizione 
+
+    // Nota : il promo elemento ha la poszione 0 , il secondo 1 , e cosi via ......
+
+    // esempio : cerchiamo apple :
+    const fruit = ["Banana", "Apple", "kiwi", "Mango"]
+    let posizione_apple = fruit.indexOf("Apple");
+    window.console.log("posizione_apple :", posizione_apple);
+
+    let posizione_Banana = fruit.indexOf("Banana");
+    window.console.log("posizione_Banana :", posizione_Banana);
+
+    // indexof() parametri : 
+    // indexof(item , start )
+    // 1) item : e l'elemeto da cercare 
+    // 2) start : il punto da cui partire , se non e presente sara 0 
+
+    // il indexOf() metodo restituisce -1 se l'elemento cercato non viene trovato 
+
+    // Se l'elemento e presente piu di una volta , indexOf() ritorna la posizione del primo match dell'elemento specificato  ( occorrenza )
+
+    //--------------------------------------------------------------------
+    // Matrice javascript lastIndexOf()
+    // Array.lastIndexOf() e uguale ad Array.indexOf()  ma restituisce la posizione dell'ultimo match dell'elemento specificato ( occorrenza )
+    const fruit_2 = ["Apple", "Orange", "Apple", "Mango"];
+    let posizione_ultimo_apple = fruit_2.lastIndexOf("Apple");
+
+    window.console.log("posizione_ultimo_apple :", posizione_ultimo_apple);
+
+    // anche qui il secondo parametro e opzionale se non viene specificato si parte da 0 
+    //--------------------------------------------------------------------
+    //    javascript array find()
+    // il find() metodo restituisce il valore del primo elemento dell'array che supera una funzione di test .
+
+    // Questo esempio trova (restituisce il valore di ) il primo elemento maggiore di 18 : 
+
+    const numeri_13 = [45, 4, 9, 16, 25];
+    let primo_maggiore_18 = numeri_13.find(myFunction_custom_9);
+
+    function myFunction_custom_9(value) {
+        return value > 18;
+    }
+
+    window.console.log("primo_maggiore_18 :", primo_maggiore_18);
+
+    // find() e una funzionalita di ES6 (javascript 2015)
+    //--------------------------------------------------------------------
+    // Matrice javascript findIndex()
+    // il findIndex() metodo restituisce l'indice del primo elemeto dell'array che supera la funzione di test .
+    // Questo esempio trova l'indice del primo elemnto maggiore di 18 :
+
+    const numeri_14 = [4, 9, 16, 25, 29];
+    let primo_maggiore_18_con_findIndex = numeri_14.findIndex(myFunction_custom_10);
+
+    function myFunction_custom_10(value) {
+        return value > 18;
+    }
+
+    window.console.log("primo_maggiore_18_con_findIndex", primo_maggiore_18_con_findIndex);
+
+    // findIndex e una funzionalita di ES6 ( javascript 2015 )
+
+    //--------------------------------------------------------------------
+    // javascript Array.from()
 
 
 
