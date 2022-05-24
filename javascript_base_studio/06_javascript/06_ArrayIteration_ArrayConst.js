@@ -236,8 +236,39 @@ function prova3() {
 
     //--------------------------------------------------------------------
     // javascript Array.from()
+    //   il  array.form() metodo restituisce un ogetto Array da qualsiasi oggeto con una propieta di lunghezza o qualsiasi oggetto iterabile 
+    // Esempio crea un array da una stringa :
+    var test_string = "ABCDEFG";
+    const array_from = Array.from(test_string);
 
+    window.console.log("array_from", array_from)
 
+    // from() e una funzione di ES6 (javascript 2015 )
+    //--------------------------------------------------------------------
+    // Chiave matrice javascript 
+    // il array.keys() metodo restituisceun oggetto Array Iterator con le chiavi di una matrice 
+    // Crea un oggettoArray iterator , contente le chaivi dell'array :
+    const fruit_3 = ["Banana", "Apple", "Orange", "Mango"];
+    let keys_fruit_3 = fruit_3.keys();
+
+    window.console.log("keys_fruit_3 :", keys_fruit_3);
+    window.console.log("fruit_3.keys();", fruit_3.keys())
+
+    let text = "";
+    for (let x of keys_fruit_3) {
+        text += x + "<br>";
+        console.log("chiavi di x :", x);
+    }
+    window.console.log("text", text);
+
+    // in alternativa usa Object.keys che ritorna un arrauìy con le chiavi 
+    let keys_fruit_3_2 = Object.keys(fruit_3);
+    window.console.log("keys_fruit_3_2 :", keys_fruit_3_2);
+
+    // keys() e una funzione di ES6 ( javascript 2015)
+    //--------------------------------------------------------------------
+
+    // array entries 
 
 
 
