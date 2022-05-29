@@ -269,6 +269,33 @@ function prova3() {
     //--------------------------------------------------------------------
 
     // array entries 
+    // il metodo array entries crea un iteratore di array , quindi esegue l'iterazione sulle coppie chaive/valore 
+
+    const fruit_4 = ["Banana", "Apple", "Kiwi", "Mango"];
+    const fruit_4_entries = fruit_4.entries();
+
+    for (x of fruit_4_entries) {
+        document.getElementById("id_div_demo").innerHTML += x + "<br>";
+    }
+
+    window.console.log("fruit_4_entries : ", fruit_4_entries);
+
+    //--------------------------------------------------------------------
+    // debug array iterator 
+    const fruit_4_entries_2 = fruit_4.entries();
+    let i = 0
+    while (i < fruit_4.length) {
+        console.log("fruit_4_entries.next() : ", fruit_4_entries_2.next());
+        i++;
+    }
+
+    // il metodo entries restituisce un oggetto Array Iterator con coppie chiave/valore :
+    // il metodo entries() non modifica l'array originale 
+    // il metodo entries() e stato introddo da ES6 (javascript 2015)
+
+    //--------------------------------------------------------------------
+
+
 
 
 
