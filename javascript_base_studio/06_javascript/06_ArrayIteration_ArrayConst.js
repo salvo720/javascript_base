@@ -283,10 +283,9 @@ function prova3() {
     //--------------------------------------------------------------------
     // debug array iterator 
     const fruit_4_entries_2 = fruit_4.entries();
-    let i = 0
-    while (i < fruit_4.length) {
-        console.log("fruit_4_entries.next() : ", fruit_4_entries_2.next());
-        i++;
+
+    for (let i = 0; i < fruit_4.length; i++) {
+        console.log("fruit_4_entries.next() element " + i + " : ", fruit_4_entries_2.next());
     }
 
     // il metodo entries restituisce un oggetto Array Iterator con coppie chiave/valore :
@@ -294,9 +293,29 @@ function prova3() {
     // il metodo entries() e stato introddo da ES6 (javascript 2015)
 
     //--------------------------------------------------------------------
+    // Array.includes()
+    // il metodo Array.includes() e statointroddotto da ECMAScript 2016 . 
+    // Questo metodo ci consente di verificare se un elemento e presente in un array ( incluso NaN , a differenza del metodo indexof() )
 
+    const fruit_5 = ["Banana", "Orange", "Apple", "Mango"]
+    let mango_Include_in_array = fruit_5.includes("Mango");
 
+    window.console.log("mango is include in array fruit_5 : ", mango_Include_in_array)
 
+    // ritorna true se l'elemento viene trovato altrimenti tornera false 
+    //--------------------------------------------------------------------
+    // const Matrice/Array javascript 
+    // ECMAScript 2015 (ES6)
+    // nel 2015 javascript ha introdotto una nuova importante parola chiave : const 
+    // E diventata pratica comune dichiarare gli array usando const 
+    // esempio :
+    const cars = ["Saab", "Volvo", "BMW"];
+
+    // un arraydichiarato con const non puo essere riasegnato
+
+    // var cars = ["Toyota", "Volvo", "AUDI"];
+    //--------------------------------------------------------------------
+    // Fermo a gli array non sono costanti
 
 
 
