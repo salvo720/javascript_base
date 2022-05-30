@@ -315,11 +315,78 @@ function prova3() {
 
     // var cars = ["Toyota", "Volvo", "AUDI"];
     //--------------------------------------------------------------------
-    // Fermo a gli array non sono costanti
 
+    // gli Array/Matrici non sono costanti
 
+    // La parola chaive const  e un po fuorviante .
+    // Non definiscono un array costante . Definisce un riferimento constate ad un array 
+    // Per questo motivo possiamo ancora modificare gli elementi di una Matrice costante . 
 
+    //--------------------------------------------------------------------
+    //  Gli elementi possono essere riassegnati
+    // e possibile modificare gli elementi di un array costante 
+    // esempio :
 
+    // puoi creare un array constate 
+    const cars_2 = ["Saab", "Volvo", "BMW"];
+
+    // puoi cambiare un elemento 
+    cars_2[0] = "Toyota";
+
+    // puoi aggiungere un elemento 
+    cars_2.push("AUDI");
+
+    window.console.log("const cars_2 edited : ", cars_2);
+
+    //--------------------------------------------------------------------
+    // Assegnato quando dichiaro 
+    // Alle variabili javascript const deve essere assegnato un valore quando dichiarate :
+    // Significato : un array dichiarato con const deve essere inizializzato quando viene dichiarato 
+    // L'utilizzo di const senza inizializzare l'array e un errore di sintatassi
+    // Esempio che genera un errore : 
+
+    // const cars_3;
+    // cars_3 = ["Saab", "Volvo", "BMW"];
+
+    // gli array dichiarati con var possono essere inizializzati in qualsiasi momento 
+    // puoi anche usare l'array prima che venga dichiarato ( grazie al sollevamento javascript )
+
+    // questo esempio va bene :
+    cars_4 = ["Saab", "Volvo", "BMW"];
+    var cars_4;
+
+    //--------------------------------------------------------------------
+    // Ambito del blocco di const 
+    // Un array dichiarato con const a Block Scope 
+    // Un array dichiarato in un blocco non e lo stesso di un array dichiarato al di fuori el blocco 
+
+    //  Esempio :
+
+    const cars_5 = ["Saab", "Volvo", "BMW"];
+    window.console.log("cars_5 block scope : ", cars_5);
+
+    {
+        const cars_5 = ["Toyota", "AUDI", "Fiat"]
+        window.console.log("myFunction_custom_11 cars_5 function scope  : ", cars_5)
+    }
+
+    window.console.log("cars_5 block scope : ", cars_5);
+
+    // Un array dichiarato con var non ha Block Scope ma Global Scope 
+
+    var cars_6 = ["Saab", "Volvo", "BMW"];
+    window.console.log("cars_6 Global scope : ", cars_6);
+
+    {
+        var cars_6 = ["Toyota", "AUDI", "Fiat"]
+        window.console.log("myFunction_custom_12 cars_6 Function scope : ", cars_6);
+
+    }
+
+    window.console.log("cars_6 Global scope : ", cars_6);
+
+    //--------------------------------------------------------------------
+    // Redeclaring Array
 
 
 
