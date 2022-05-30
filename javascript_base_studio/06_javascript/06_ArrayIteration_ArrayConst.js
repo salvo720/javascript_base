@@ -363,30 +363,97 @@ function prova3() {
     //  Esempio :
 
     const cars_5 = ["Saab", "Volvo", "BMW"];
-    window.console.log("cars_5 block scope : ", cars_5);
+    window.console.log("cars_5 : ", cars_5);
 
     {
         const cars_5 = ["Toyota", "AUDI", "Fiat"]
-        window.console.log("myFunction_custom_11 cars_5 function scope  : ", cars_5)
+        window.console.log("myFunction_custom_11 cars_5 block scope  : ", cars_5)
     }
 
-    window.console.log("cars_5 block scope : ", cars_5);
+    window.console.log("cars_5 : ", cars_5);
 
     // Un array dichiarato con var non ha Block Scope ma Global Scope 
 
     var cars_6 = ["Saab", "Volvo", "BMW"];
-    window.console.log("cars_6 Global scope : ", cars_6);
+    window.console.log("cars_6 : ", cars_6);
 
     {
         var cars_6 = ["Toyota", "AUDI", "Fiat"]
-        window.console.log("myFunction_custom_12 cars_6 Function scope : ", cars_6);
+        window.console.log("myFunction_custom_12 cars_6 Global scope : ", cars_6);
 
     }
 
-    window.console.log("cars_6 Global scope : ", cars_6);
+    window.console.log("cars_6 : ", cars_6);
+    //--------------------------------------------------------------------
+
+    // javascript curly brackets without function
+
+    // solo le parentesi graffe {} , su javascript senza nome di funzione e senza le parentesi tonde 
+    // indicano un blocco di codice con Block Scope 
+    // non ha senso mettere dentro le graffe che rappresentano il Block Scope , var che hanno Global Scope 
+    // non appena scriviamo codice all'esterno delle parentesi graffe non siamo piu dentro il Block Scope 
+    {
+        const my_array_coustom = [10, 2, 100]
+        window.console.log("Block Scope my_array_coustom :", my_array_coustom);
+    }
+    const my_array_coustom = [100]
+    window.console.log("Global Scope my_array_coustom :", my_array_coustom);
 
     //--------------------------------------------------------------------
-    // Redeclaring Array
+    // Redeclaring Array 
+    // Ridichiare un Array 
+    // Ridichiarea un array dichiarato con var e consentito ovunque in un programma , 
+
+    var cars_7 = ["Saab", "Volvo"]; //allowed
+    var cars_7 = ["BMW", "Volvo"];  //allowed
+    cars_7 = ["AUDI", "Volvo"]; //allowed
+
+    window.console.log("Global Scope cars_7 :", cars_7);
+
+
+    // Non e consentito (passare da var a const ) ridichiarare o riassegnare un array a const, nello stesso ambito o nello stesso blocco 
+
+    var cars_8 = ["BMW", "Volvo"]; // allowed
+    // const cars_8 = ["Saab", "Volvo"]; //not allowed
+    window.console.log("Global Scope cars_8 :", cars_8);
+
+    {
+        var cars_8 = ["BMW", "Volvo"]; // allowed
+        // const cars_8 = ["BMW", "Volvo"]; //not allowed
+        window.console.log("Block Scope cars_8 :", cars_8);
+
+    }
+
+    // non e consentito ridichiarare o riassegnare un const array esistente , nello stesso ambito o nello stesso blocco :
+
+    const cars_9 = ["Saab", "Volvo"]; // allowed
+    // const cars_9 = ["Saab", "Volvo"]; //not allowed
+    // var cars_9 = ["Saab", "Volvo"]; //not allowed
+    // cars_9 = ["Saab", "Volvo"]; //not allowed
+    window.console.log("Global Scope cars_9 :", cars_9);
+
+    {
+        const cars_9 = ["Saab", "Volvo"]; // allowed
+        // const cars_9 = ["Saab","Volvo"] ; //not allowed
+        // var cars_9 = ["Saab","Volvo"] ; //not allowed
+        // cars_9 = ["Saab","Volvo"] ; //not allowed
+        window.console.log("Block Scope cars_9 :", cars_9);
+
+    }
+
+    // e consentito richiarareun array con const, in un atlro ambito o in un altro blocco 
+    const cars_10 = ["Saab", "Volvo"]; // allowed
+    window.console.log("Global Scope cars_10 :", cars_10);
+    {
+        const cars_10 = ["BMW", "AUDI"] // allowed
+        window.console.log("Block Scope cars_10 :", cars_10);
+
+    }
+    {
+        const cars_10 = ["Toyota", "Fiat"] // allowed
+        window.console.log("Block Scope cars_10 :", cars_10);
+
+    }
 
 
 
