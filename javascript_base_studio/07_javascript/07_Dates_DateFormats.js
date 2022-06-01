@@ -148,6 +148,33 @@ function prova3() {
     // I metodi della data consentonodi ottenere e impostare: anno, mese, giorno, ora, minuti, secondi, millisecondi degli oggetti data utilizzare l'ora locale o l'ora UTC 
     //--------------------------------------------------------------------
     // visualizzazione delle date 
+    // javascript generarera per impostazione predefinitale date in formato di stringa di testo completo 
+    const date_25 = new Date();
+    document.getElementById("id_div_demo").innerHTML = date_25
+    window.console.log("date_25 : ", date_25, "type : ", typeof (date_25));
+
+    // quando visulizzi un oggetto data in html viene automaticamente convertito con il metodo to String() 
+
+    const date_25_string = date_25.toString();
+    window.console.log("date_25_string : ", date_25_string, "type : ", typeof (date_25_string));
+
+
+    // il metodo toUTCString() converte una data in una stringa UTC ( uno standard di visualizzazione della data ) ( Coordinated Universal Time )
+
+    const date_25_UTC = date_25.toUTCString();
+    window.console.log("date_25_UTC : ", date_25_UTC, "type : ", typeof (date_25_UTC));
+
+    // il metodo toDateString converte un oggetto di tipo data in un formato piu leggibile 
+    const date_25_toDateString = date_25.toDateString();
+    window.console.log("date_25_toDateString : ", date_25_toDateString, "type : ", typeof (date_25_toDateString));
+
+    // il metodo toISOString() converte un oggetto Data in una stringa, utilizzando il formato ISO 
+
+    const date_25_toISOString = date_25.toISOString();
+    window.console.log("date_25_toISOString : ", date_25_toISOString, "type : ", typeof (date_25_toISOString));
+
+    //--------------------------------------------------------------------
+    // Formato data javascript 
 
 
 
