@@ -175,9 +175,37 @@ function prova3() {
 
     //--------------------------------------------------------------------
     // Formato data javascript 
+    // Esistono 3 tipi di formato per la data in javascript 
+    // TIPO                                                      DATA(esempio)
+    // Data ISO                                                  2015-03-25(lo standard internazionale )
+    // Short Date ( data corta )                                 25/03/2015
+    // Long Date (data lunga)                                    "Mar 25 2015" oppure "25 Mar 2015"
 
+    // il formato ISO segue uno standard rigoroso in Javascript 
+    // Gli altri formati non sono ben definiti e potrebbero essere specifici del browser 
 
+    //--------------------------------------------------------------------
+    // Uscita data Javascript 
+    // Indipendentemente dal formato di input javascript, generera(per impostazione predefinita) le date in formatostringa di testo completo : 
+    const date_28 = new Date();
+    window.console.log("date_28 : ", date_28, "type : ", typeof (date_28));
 
+    //--------------------------------------------------------------------
+    // Date ISO javascript 
+    // ISO 8601 e lo standard internazionaleper la rappresentazione di date e orari. 
+    // La sintassi dello standard 8601 (AAAA-MM-GG ) , e anche il formato javascript predefinito 
+    // esempio data completa :
+    const data_29 = new Date();
+    window.console.log("data_29 : ", data_29, "type : ", typeof (data_29));
+
+    // La data calcolata sara relativa al tuo fuso orario 
+    // A seconda del fuso orario il risultato seguente varia da 24 a 25 marzo 
+
+    const date_30 = new Date("2015-03-25")
+    window.console.log("date_30 : ", date_30, "type : ", typeof (date_30));
+
+    //--------------------------------------------------------------------
+    // Data ISO ( anno e meso )
 
 
 
