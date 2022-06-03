@@ -276,6 +276,7 @@ function prova3() {
 
     for (x of fruit_4_entries) {
         document.getElementById("id_div_demo").innerHTML += x + "<br>";
+        window.console.log("test", x);
     }
 
     window.console.log("fruit_4_entries : ", fruit_4_entries);

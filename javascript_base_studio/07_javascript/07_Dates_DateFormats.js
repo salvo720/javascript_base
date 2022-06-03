@@ -207,6 +207,19 @@ function prova3() {
     //--------------------------------------------------------------------
     // Data ISO ( anno e meso )
 
+    // Le date ISO possono essere scritte senza specificare il giorno (AAAA-MM)
+    const date_29 = new Date("2015-03");
+    window.console.log("date_29 : ", date_29, "type : ", typeof (date_29));
 
+    // con i vari fusi orar il risultato sopra puo cambiare da 28 febbraio a 1 marzo 
+
+    //--------------------------------------------------------------------
+    // Iso Dates ( only year )
+    // le date iso possono essere scritte senza mese e giorno 
+    const date_31 = new Date("2015");
+    window.console.log("date_31 : ", date_31, "type : ", typeof (date_31));
+    // i fusi orari cambieranno il risultato tra il 31 dicembre 2014 e il 1 gennaio 2015 
+
+    //--------------------------------------------------------------------
 
 }
