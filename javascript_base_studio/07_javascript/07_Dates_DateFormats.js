@@ -222,5 +222,75 @@ function prova3() {
 
     //--------------------------------------------------------------------
 
+    // Date ISO (data e ora )
+    // Le date iso possono essere scritte aggiungendo ore, minuti e secondi(AAAA - MM - GG T HH:MM:SS Z)
+    // esempio : 
+    const date_32 = new Date("2015-03-25T12:00:00Z");
+    window.console.log("date_32 : ", date_32, "type : ", typeof (date_32));
+
+    // data e ora sono separate da una T MAIUSCOLA 
+    // l'ORA UTC e definita con una Z maiuscola 
+    // se vuoi modificare l'ora relativa a UTC , rimuvi la Z e aggiungi +HH:MM 
+
+    // esempio 
+    const date_33 = new Date("2015-03-25T12:00:00-06:00");
+    window.console.log("date_33 -06:00 : ", date_33, "type : ", typeof (date_33));
+
+    const date_34 = new Date("2015-03-25T12:00:00+06:00");
+    window.console.log("date_34 +06:00 : ", date_34, "type : ", typeof (date_34));
+
+    const date_35 = new Date("2015-03-25T12:00:00+14:00");
+    window.console.log("date_35 +14:00 : ", date_35, "type : ", typeof (date_35));
+
+    // + e - nelle date hanno significato opposto sulle ore (date-time) ore: minuti 
+    // ( + significa - )
+    // ( - significa + )
+
+    // UTC ( Universal Time Coordinated ) e lo stesso di GMT (Greenwich mean time )
+
+    // L'omissione della stringa T e Z nella stringa data puo dare risultati diversi in browser diversi 
+
+    //--------------------------------------------------------------------
+    // Fusi orari 
+    // Quando si impostauna data senza specificare il fuso orario , Javascript utilizzera il fuso orario del browser 
+    // Quando si ottiene una data, senza specificare il fuso orario,il risultato vienen convertito nel fuso orario del browser 
+    //  in altre parole se una data / ora viene creta in GTM ( Greenwich Mean Time), la data / ora verra convertita in CTD(cENTRA us Daylight Time) 
+    // se un utente naiga dagli stati uniti centrali
+    //--------------------------------------------------------------------
+
+    // Javascript Date brevi (short date)
+
+    // le date brevi sono scirtte con una sintassi "MM/GG/AAAA" come questa 
+
+    const date_36 = new Date("03-25-2015")
+    window.console.log("date_36 : ", date_36, "type : ", typeof (date_36));
+
+    // Attenzione : in alcuni browser , mesi o giorni senza 0 iniziali possono produrre errori 
+    const date_37 = new Date("3-25-2015")
+    window.console.log("date_37 : ", date_37, "type : ", typeof (date_37));
+
+    const date_38 = new Date("2015-3-25")
+    window.console.log("date_38 : ", date_38, "type : ", typeof (date_38));
+
+    // il comportamento di "AAAA/MM/GG" non e definito .
+    // Alcuni Browser proveranno a indovinare il formato. Alcuni restituiranno NaN
+
+    const Date_39 = new Date("2015-03-25")
+    window.console.log("Date_39 : ", Date_39, "type : ", typeof (Date_39));
+
+
+    // Anche il compartamento di "GG-MM-AAAA" non e definito.
+    // alcuni browser proveranno ad indovinare il formato altri restituiranno NaN
+
+    const date_40 = new Date("25-03-2015")
+    window.console.log("date_40 : ", date_40, "type : ", typeof (date_40));
+
+    //--------------------------------------------------------------------
+
+    // date lunghe javascript 
+
+
+
+
 
 }
