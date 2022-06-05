@@ -289,6 +289,48 @@ function prova3() {
 
     // date lunghe javascript 
 
+    // le date lunghe sono spesso scritte con una sintassi come questa  "MMM GG AAAA" come questa :
+    const date_41 = new Date("Mar 25 2015");
+    window.console.log("date_41 : ", date_41, "type : ", typeof (date_41));
+
+    // mese e giorno possono essere in qualsiasi ordine 
+    const date_42 = new Date("25 Mar 2015");
+    window.console.log("date_42 : ", date_42, "type : ", typeof (date_42));
+
+    // Il mese puo essere scitto per intero o abbreviato 
+    const date_43 = new Date("January 25 2015");
+    window.console.log("date_43 : ", date_43, "type : ", typeof (date_43));
+
+    // mese abbreviato 
+    const date_44 = new Date("Jan 25 2015");
+    window.console.log("date_44 : ", date_44, "type : ", typeof (date_44));
+
+    // le virgole vengono ignorate . I nomi non fanno distinizioni tra Maiuscole e minuscole :
+    const date_45 = new Date(" JANUARY , 25, 2015");
+    window.console.log("date_45 : ", date_45, "type : ", typeof (date_45));
+
+    //--------------------------------------------------------------------
+
+    // INPUT DATA - Analisi delle date 
+    // Se si dispone di una stringa Data valida e possibile utilizzare il Date.parse() metodoper convertirla in millisecondi. 
+    // Date.parse() restituisceil numero in milliseconditra la data e 1 gennaio 1970 :
+
+    let msec = Date.parse("Jan 01 2015");
+    window.console.log("msec : ", msec, "type : ", typeof (msec));
+
+    // e quindi possibileutilizzare il numerodi millisecondiper convertirloin un oggeto data : 
+    let msec_2 = Date.parse("Jan 1 2015");
+    window.console.log("msec_2 : ", msec_2, "type : ", typeof (msec_2));
+    const date_46 = new Date(msec_2);
+    window.console.log("date_46 da msec_2( data in formato millisecondi ) : ", date_46, "type : ", typeof (date_46));
+
+    //--------------------------------------------------------------------
+
+    // Javascript Ottieni metodidi data
+
+
+
+
 
 
 
