@@ -326,10 +326,130 @@ function prova3() {
 
     //--------------------------------------------------------------------
 
-    // Javascript Ottieni metodidi data
+    // Javascript Ottieni metodi di data
+
+    // Questi metodi possono essere utilizzare per ottenere informazioni da un oggetto data :
+    // Metodo                                               Descrizione
+    // getFullYear()                                        Ottiene l'anno della data in formato da 4 lettere (AAAA)
+    // getMonth()                                           Ottiene il mese come numero (0-11)
+    // getDays()                                            Ottiene il giorno come numero (1-31)
+    // getHours()                                           Ottiene l'ora come numero (0-23)
+    // getMinutes()                                         Ottiene i minuti come numero (0-59)
+    // getSeconds()                                         Ottiene i secondi come numero (0-59)
+    // getMilliseconds()                                    Ottiene i millisecondi come numero (0-999)
+    // getTime()                                            Ottiene il tempo in millisecondi partendo dal 1 gennaio 1970 
+    // getDay()                                             Ottiene il giorno della settimana come numero (0-6)
+    // Date.now()                                           Ottiene il tempo . ECMAScript 5 
 
 
+    //--------------------------------------------------------------------
 
+    const full_date = new Date();
+    window.console.log("full_date new Date() : ", full_date, "type : ", typeof (full_date));
+
+    //--------------------------------------------------------------------
+
+
+    // getFullYear() , ottiene l'anno in formato numerico (AAAA) , come numero di 4 cifre 
+    const date_47 = new Date().getFullYear();
+    window.console.log("date_47 getFullYear(): ", date_47, "type : ", typeof (date_47));
+
+    //--------------------------------------------------------------------
+
+
+    // getMouth() , ottiene il mese in formato numerico (0-11)
+    const date_48 = new Date().getMonth();
+    window.console.log("date_48 getMonth(): ", date_48, "type : ", typeof (date_48));
+
+
+    // puoi usare una matrice/Array per restituire il nome del mese 
+
+    const month = ["January", "Febrary", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+    let month_used = month[new Date().getMonth()];
+    window.console.log("month : ", month, "type : ", typeof (month));
+    window.console.log("month_used : ", month_used, "type : ", typeof (month_used));
+    //--------------------------------------------------------------------
+
+
+    // getDay() , ottiene il giorno in formato numerico (1-31)
+    const date_49 = new Date().getDay();
+    window.console.log("date_49 getDay(): ", date_49, "type : ", typeof (date_49));
+
+    //--------------------------------------------------------------------
+
+
+    // getHours() , ottiene l'ora in formato numerico (0-23)
+    const date_50 = new Date().getHours();
+    window.console.log("date_50 getHours(): ", date_50, "type : ", typeof (date_50));
+
+    //--------------------------------------------------------------------
+
+    // getMinutes() , ottiene i minuti in formato numerico (0-59)
+    const date_51 = new Date().getMinutes();
+    window.console.log("date_51 getMinutes() : ", date_51, "type : ", typeof (date_51));
+
+    //--------------------------------------------------------------------
+
+    // getSeconds() , ottiene i secondi in formato numerico (0-59) 
+    const date_52 = new Date().getSeconds();
+    window.console.log("date_52 getSeconds(): ", date_52, "type : ", typeof (date_52));
+
+    //--------------------------------------------------------------------
+
+    // getMilliseconds() , ottiene i millisecondi in formato numerico da (0-999)
+    const date_53 = new Date().getMilliseconds();
+    window.console.log("date_53 getMilliseconds(): ", date_53, "type : ", typeof (date_53));
+
+    //--------------------------------------------------------------------
+
+    // getTime() , ottiene il tempo in millisecondi partendo da 1 gennaio 1970 
+    const date_54 = new Date().getTime();
+    window.console.log("date_54 : ", date_54, "type : ", typeof (date_54));
+
+    //--------------------------------------------------------------------
+
+    // getDay , ottiene il giorno della settimana in formato numerico da (0-6)
+    // In javascript il primo giorno della settimana 0 e Domenica , anche se alcuni paesi considerano il primo giorno della settimana lunedi 
+    // perche viene preso come modello la data americana , quindi 0 e Domenica e 1 e Lunedi 
+
+    // e possibile usare una matrice / Array di nomi e getDay() metodo per restiure il nome del giorno della settimana : 
+    const Days_week = ["Sunday", "Monday", "Tuesday", "Wendnesday", "Thursday", "Friday", "Saturaday"];
+    window.console.log("Days_week : ", Days_week, "type : ", typeof (Days_week));
+    let name_day = Days_week[new Date().getDay()];
+    window.console.log("name_day : ", name_day, "type : ", typeof (name_day));
+
+
+    const date_55 = new Date().getDay();
+    window.console.log("date_55 : ", date_55, "type : ", typeof (date_55));
+
+    const date_56 = new Date("June 05 2022").getDay();
+    window.console.log("date_56 : ", date_56, "type : ", typeof (date_56));
+
+    //--------------------------------------------------------------------
+
+    // Date.now() , ottiene la data ECMAScript 5 , in millisendi 
+    const date_57 = Date.now();
+    window.console.log("date_57 Date.now() : ", date_57, "type : ", typeof (date_57));
+    let date_converted = new Date(date_57)
+    window.console.log("date_converted da Date.now() : ", date_converted, "type : ", typeof (date_converted));
+
+    //--------------------------------------------------------------------
+
+    // Metodi della data UTC 
+    // i metodi della data UTC vengono utilizzati per lavorare con le date UTC(date del fuso orario universale)
+    // Metodo                                               Descrizione 
+
+    // getUTCFullyear()                                        lo stesso di getFullYear(), ma ritorna una data UTC
+    // getUTCMonth()                                           lo stesso di getMonth(), ma ritorna una data UTC
+    // getUTCDate()                                            lo stesso di getDate(), ma ritorna  una data UTC
+    // getUTCHours()                                           lo stesso di getHours(), ma ritorna una data UTC
+    // getUTCMinutes()                                         lo stesso di getMinutes(), ma ritorna una data UTC
+    // getUTCSeconds()                                         lo stesso di getSeconds(), ma ritorna una data UTC
+    // getUTCMilliseconds()                                    lo stesso di getMilliseconds(), ma ritorna una data UTC
+    // getUTCDay()                                             lo stesso di getDay(), ma ritorna una data UTC
+
+    //--------------------------------------------------------------------
+    // Javascript imposta i metodi della data 
 
 
 
