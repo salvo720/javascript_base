@@ -136,3 +136,12 @@ function higherOrder2() {
 
 var x = higherOrder2();
 console.log("hight order function 2", x())   // Returns "Do something"
+
+/* ------------------------------------------------------------------------------------ */
+
+// Invertire l'ordine di una stringa e tronare il risultato scomposto in array 
+var test = "gennaio";
+let result = test.split(',').reverse().join(',')
+window.console.log("result : ", result)
+
+/* ------------------------------------------------------------------------------------ */
