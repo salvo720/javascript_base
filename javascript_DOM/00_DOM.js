@@ -92,9 +92,52 @@ function prova3() {
     // ATTENZIONE : la innerHTML propieta puo essere utilizzata per modificare qualsiasi elemnto HTML inclusi <html> e <body> 
 
     //--------------------------------------------------------------------
+    // Javascript HTML DOM Document 
+    // l'oggeto documento HMTL DOM e il propietario di tutti gli altri oggetti della tua pagina web 
+
+    //--------------------------------------------------------------------
+    // L'oggetto documento HTML DOM 
+    // l'oggetto del documento rappresenta la tua pagina web .
+    // Se vuoi accedere a quasiasi elemetoin una pagina HTML, inizi sempre con l'oggetto del documento .
+    // Di seguito sono riportati alcuni esempidi come e possibile utilizzareL'oggetto documento per accedere e manipolare L'HTML .
+
+    //--------------------------------------------------------------------
+    // Trovare elementi HTML
+
+    // Metodi                                                                   Descrizione 
+    // document.getElement.ById(id)                                             Trova un elemento da un id
+    // document.getElementsByTagName(name)                                      Trova elemento dal nome del tag  
+    // document.getElementsByClassName(name)                                    Trova un elemnto dal nome della classe 
+
+    //--------------------------------------------------------------------
+    // Modifica degli elementi HTML 
+
+    // Propieta                                                                    Descrizione 
+    // element.innerHTML = new html contet                                         Modifica il contenuto HTML di un elemento 
+    // element.attribute = new value                                               Modifica il valore di un attributo di un elemento HTML 
+    // element.style.property = new style                                          Modifica lo stile di un elemento HTML                
 
 
+    // Metodi                                                                      Descrizione 
+    // Element.setAttribute(attribute, value)                                      Modifica il valore di un attributodi un elemento HTML
 
 
+    //--------------------------------------------------------------------
+    // Aggiunta ed eliminiziane di elementi HTML 
 
-}
+    // Metodi                                                                      Descrizione
+    // document.createElement(element)                                             Crea un elemento HTML
+    // document.removeChild(element)                                               Rimuove un elemento HTML 
+    // document.appendChild(element)                                               Aggiunge un elemento HTML 
+    // document.replaceChild(old,new)                                              Sostituisce un elemento HTML 
+    // document.write(text)                                                        Scrive nel flusso di Output HTML 
+
+    //--------------------------------------------------------------------
+    // Aggiunta gestore di eventi 
+    // Metodi                                                                      Descrizione 
+    // document.getElementById("id").click = functione(){ code }                   Aggiunge del codice gestore eventi (event handler ) a un evento onclick  
+
+    //--------------------------------------------------------------------
+    // Trovare gli oggetti HTML 
+
+}   
