@@ -197,4 +197,50 @@ function prova3() {
     //--------------------------------------------------------------------
     // Elementi Javascript HTML DOM 
 
+    // Trovare gli elementi html
+    // Spesso con Javascript si ha la necessita di manipolare elementi HTML .
+    // Per fare cio devi prima trovare gli elementi . Ci sono diversi modi per farlo :
+    // -Trovare gli ementi HTML  per id
+    // -Trovare gli elementi HTML in base al nome del tag 
+    // -Trovare gli elementi HTML in base al nome della classe 
+    // -Trovare gli elementi HTML dai selettori CSS
+    // -Trovare elementi HTML da raccolte di oggetti HTML 
+
+    //--------------------------------------------------------------------
+    // Trovare l'elemento HTML dal tag id 
+    // Il modo piu semplice per trovareun elementO HTML nel DOM e utilizzare l'ID elemento .
+    // Questo esempio trava l'elemento con id="id_div_demo" :
+
+    const element = document.getElementById("id_div_demo");
+    window.console.log("element : ", element, "type : ", typeof (element));
+
+
+    // se l'elemento viene trovato ,  il modulo restituira l'elemento come da oggetto(in element)
+    // Se l'elemento non viene trovato , l'elemento sara null 
+
+    //--------------------------------------------------------------------
+    // Trovare elementi HTML in base al nome del tag 
+    // Questo esempio trova tutti gli elementi <p>
+
+    const element_2 = document.getElementsByTagName("p");
+    window.console.log("element_2 ( element by tag p) : ", element_2, "type : ", typeof (element_2));
+
+
+    // Questo esempio trova l'elemento con id="main" e quindi trova tutti i <p> gli elementi all'interno di "main" : 
+    const element_main = document.getElementById("main");
+    window.console.log("element_main ( with id main) : ", element_main, "type : ", typeof (element_main));
+
+    const p_in_main = element_main.getElementsByTagName("p");
+    window.console.log("p_in_main ( p inside main ) : ", p_in_main, "type : ", typeof (p_in_main));
+
+    //--------------------------------------------------------------------
+    // Trova elementi HTML in base al nome della classe 
+    // Se vuoi trovare tutti gli elementi HTML con lo stesso nomedi una classe, usa getElementsByClassName() .
+    // Questo esempio restituisceun elencodi tutti gli elementicon class="intro" :
+    const element_3 = document.getElementsByClassName("intro");
+    window.console.log("element_3 with class intro : ", element_3, "type : ", typeof (element_3));
+
+    //--------------------------------------------------------------------
+    // Trovare gli elementi HTML dai selettori css
+
 }   
