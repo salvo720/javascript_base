@@ -242,5 +242,58 @@ function prova3() {
 
     //--------------------------------------------------------------------
     // Trovare gli elementi HTML dai selettori css
+    // Se vuoi trave tutti gli elemeti html cheche corrispondono a un selettore CSS specificato(id,nomi di classi , tipi , attributi , valori , ecc ... ) usa il querySelectorAll() metodo . 
+    // Questo esempio restituisceun elenco di tutti i < p >  gli elementi con class="intro" 
+    // esempio : 
+    const all_p_with_intro_class = document.querySelectorAll("p.intro");
+    window.console.log("all_p_with_intro_class : ", all_p_with_intro_class, "type : ", typeof (all_p_with_intro_class));
+
+    //--------------------------------------------------------------------
+    // Trovare elementi HTML da raccolte di oggetti HTML 
+    // Questo esempio trova in modulo con id = "form_1", nella raccolta dei moduli e visualizzatutti i valori degli elementi :
+    // esempio : 
+    const modulo_form = document.forms["form_1"];
+    window.console.log("modulo_form with id='form_1' : ", modulo_form, "type : ", typeof (modulo_form));
+    let text = "";
+    for (let i = 0; i < modulo_form.length; i++) {
+        text += modulo_form.elements[i].value + "<br>";
+        window.console.log("text : ", text, "type : ", typeof (text));
+    }
+
+    document.getElementById("id_div_demo").innnerHTML = text;
+
+    //--------------------------------------------------------------------
+    // Javascript HTML DOM - Modifica dell'HTML
+
+    // il DOM HTML consente a javascript di modificareil contenuto degli elementi HTML. 
+    //--------------------------------------------------------------------
+
+    // Modifica del contenuto HTML
+
+    // il modo piu semplice per modificare il contenuto di un elemento HTML , e utilizzare la propieta innerHTML .
+    // Per modificareil contenutodi un elemento HTML , utilizza questa sintassi . 
+
+    // document.getElementById(id).innerHTML = new HTML 
+
+    // Questo esempio cambia il contenuto di pdi un elemento <p> :
+    document.getElementById("id_p_1").innerHTML = "New text in p by javascript ";
+
+    // Speigazione esempio :
+    // -il documento HTML sopra contiene un < p > elemento con id = "id_p_1"
+    // -Usiamo il DOM HTML per ottenere l'elemento con id="id_p_1"
+    // -Un javascript cambia il contenuto ( innerHTML ) di quell'elemento in "New text in p by javascript ";
+
+    // Questo esempio cambia il contenuto di un h1 :
+    const h1_element = document.getElementById("id_h1_0");
+    h1_element.innerHTML = "New h1 text by javascript "
+
+    // Spiegazione esempio : 
+    // il documento sopra contiene un <h1> elemento con id="id_h1_0"
+    // Usiamo il DOM HTML  per ottere l'elemento con id="id_h1_0"
+    // Un javascript cambia il contenuto( innerHTML ) di quell'elemento in " Nuova intestazione "
+
+    //--------------------------------------------------------------------
+    // Modifica del valroe di un attributo 
+
 
 }   
