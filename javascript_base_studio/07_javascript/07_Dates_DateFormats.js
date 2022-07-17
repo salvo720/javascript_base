@@ -454,6 +454,24 @@ function prova3() {
 
 
 
+    //--------------------------------------------------------------------
+    // il metodo setFullYear()
+    // IL METODO setFullYear impostal'anno di un oggetto data . In questo esempio fino al 2020 :
+    const date_58 = new Date
+    date_58.setFullYear(2020);
+    window.console.log("date_58 : ", date_58, "type : ", typeof (date_58));
+
+    // il metodo setFullYear puo impostare facoltativamente anche il mese e il giorno (formato YYYY/MM/DD):
+    const date_59 = new Date();
+    date_59.setFullYear(2019, 2, 15)
+    window.console.log("date_58 : ", date_59, "type : ", typeof (date_59));
+
+
+    //--------------------------------------------------------------------
+
+
+
+
 
 
 }
