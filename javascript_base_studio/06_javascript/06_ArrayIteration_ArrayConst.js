@@ -276,6 +276,7 @@ function prova3() {
 
     for (x of fruit_4_entries) {
         document.getElementById("id_div_demo").innerHTML += x + "<br>";
+        window.console.log("test", x);
     }
 
     window.console.log("fruit_4_entries : ", fruit_4_entries);
@@ -283,10 +284,9 @@ function prova3() {
     //--------------------------------------------------------------------
     // debug array iterator 
     const fruit_4_entries_2 = fruit_4.entries();
-    let i = 0
-    while (i < fruit_4.length) {
-        console.log("fruit_4_entries.next() : ", fruit_4_entries_2.next());
-        i++;
+
+    for (let i = 0; i < fruit_4.length; i++) {
+        console.log("fruit_4_entries.next() element " + i + " : ", fruit_4_entries_2.next());
     }
 
     // il metodo entries restituisce un oggetto Array Iterator con coppie chiave/valore :
@@ -294,13 +294,167 @@ function prova3() {
     // il metodo entries() e stato introddo da ES6 (javascript 2015)
 
     //--------------------------------------------------------------------
+    // Array.includes()
+    // il metodo Array.includes() e statointroddotto da ECMAScript 2016 . 
+    // Questo metodo ci consente di verificare se un elemento e presente in un array ( incluso NaN , a differenza del metodo indexof() )
+
+    const fruit_5 = ["Banana", "Orange", "Apple", "Mango"]
+    let mango_Include_in_array = fruit_5.includes("Mango");
+
+    window.console.log("mango is include in array fruit_5 : ", mango_Include_in_array)
+
+    // ritorna true se l'elemento viene trovato altrimenti tornera false 
+    //--------------------------------------------------------------------
+    // const Matrice/Array javascript 
+    // ECMAScript 2015 (ES6)
+    // nel 2015 javascript ha introdotto una nuova importante parola chiave : const 
+    // E diventata pratica comune dichiarare gli array usando const 
+    // esempio :
+    const cars = ["Saab", "Volvo", "BMW"];
+
+    // un arraydichiarato con const non puo essere riasegnato
+
+    // var cars = ["Toyota", "Volvo", "AUDI"];
+    //--------------------------------------------------------------------
+
+    // gli Array/Matrici non sono costanti
+
+    // La parola chaive const  e un po fuorviante .
+    // Non definiscono un array costante . Definisce un riferimento constate ad un array 
+    // Per questo motivo possiamo ancora modificare gli elementi di una Matrice costante . 
+
+    //--------------------------------------------------------------------
+    //  Gli elementi possono essere riassegnati
+    // e possibile modificare gli elementi di un array costante 
+    // esempio :
+
+    // puoi creare un array constate 
+    const cars_2 = ["Saab", "Volvo", "BMW"];
+
+    // puoi cambiare un elemento 
+    cars_2[0] = "Toyota";
+
+    // puoi aggiungere un elemento 
+    cars_2.push("AUDI");
+
+    window.console.log("const cars_2 edited : ", cars_2);
+
+    //--------------------------------------------------------------------
+    // Assegnato quando dichiaro 
+    // Alle variabili javascript const deve essere assegnato un valore quando dichiarate :
+    // Significato : un array dichiarato con const deve essere inizializzato quando viene dichiarato 
+    // L'utilizzo di const senza inizializzare l'array e un errore di sintatassi
+    // Esempio che genera un errore : 
+
+    // const cars_3;
+    // cars_3 = ["Saab", "Volvo", "BMW"];
+
+    // gli array dichiarati con var possono essere inizializzati in qualsiasi momento 
+    // puoi anche usare l'array prima che venga dichiarato ( grazie al sollevamento javascript )
+
+    // questo esempio va bene :
+    cars_4 = ["Saab", "Volvo", "BMW"];
+    var cars_4;
+
+    //--------------------------------------------------------------------
+    // Ambito del blocco di const 
+    // Un array dichiarato con const a Block Scope 
+    // Un array dichiarato in un blocco non e lo stesso di un array dichiarato al di fuori el blocco 
+
+    //  Esempio :
+
+    const cars_5 = ["Saab", "Volvo", "BMW"];
+    window.console.log("cars_5 : ", cars_5);
+
+    {
+        const cars_5 = ["Toyota", "AUDI", "Fiat"]
+        window.console.log("myFunction_custom_11 cars_5 block scope  : ", cars_5)
+    }
+
+    window.console.log("cars_5 : ", cars_5);
+
+    // Un array dichiarato con var non ha Block Scope ma Global Scope 
+
+    var cars_6 = ["Saab", "Volvo", "BMW"];
+    window.console.log("cars_6 : ", cars_6);
+
+    {
+        var cars_6 = ["Toyota", "AUDI", "Fiat"]
+        window.console.log("myFunction_custom_12 cars_6 Global scope : ", cars_6);
+
+    }
+
+    window.console.log("cars_6 : ", cars_6);
+    //--------------------------------------------------------------------
+
+    // javascript curly brackets without function
+
+    // solo le parentesi graffe {} , su javascript senza nome di funzione e senza le parentesi tonde 
+    // indicano un blocco di codice con Block Scope 
+    // non ha senso mettere dentro le graffe che rappresentano il Block Scope , var che hanno Global Scope 
+    // non appena scriviamo codice all'esterno delle parentesi graffe non siamo piu dentro il Block Scope 
+    {
+        const my_array_coustom = [10, 2, 100]
+        window.console.log("Block Scope my_array_coustom :", my_array_coustom);
+    }
+    const my_array_coustom = [100]
+    window.console.log("Global Scope my_array_coustom :", my_array_coustom);
+
+    //--------------------------------------------------------------------
+    // Redeclaring Array 
+    // Ridichiare un Array 
+    // Ridichiarea un array dichiarato con var e consentito ovunque in un programma , 
+
+    var cars_7 = ["Saab", "Volvo"]; //allowed
+    var cars_7 = ["BMW", "Volvo"];  //allowed
+    cars_7 = ["AUDI", "Volvo"]; //allowed
+
+    window.console.log("Global Scope cars_7 :", cars_7);
 
 
+    // Non e consentito (passare da var a const ) ridichiarare o riassegnare un array a const, nello stesso ambito o nello stesso blocco 
 
+    var cars_8 = ["BMW", "Volvo"]; // allowed
+    // const cars_8 = ["Saab", "Volvo"]; //not allowed
+    window.console.log("Global Scope cars_8 :", cars_8);
 
+    {
+        var cars_8 = ["BMW", "Volvo"]; // allowed
+        // const cars_8 = ["BMW", "Volvo"]; //not allowed
+        window.console.log("Block Scope cars_8 :", cars_8);
 
+    }
 
+    // non e consentito ridichiarare o riassegnare un const array esistente , nello stesso ambito o nello stesso blocco :
 
+    const cars_9 = ["Saab", "Volvo"]; // allowed
+    // const cars_9 = ["Saab", "Volvo"]; //not allowed
+    // var cars_9 = ["Saab", "Volvo"]; //not allowed
+    // cars_9 = ["Saab", "Volvo"]; //not allowed
+    window.console.log("Global Scope cars_9 :", cars_9);
+
+    {
+        const cars_9 = ["Saab", "Volvo"]; // allowed
+        // const cars_9 = ["Saab","Volvo"] ; //not allowed
+        // var cars_9 = ["Saab","Volvo"] ; //not allowed
+        // cars_9 = ["Saab","Volvo"] ; //not allowed
+        window.console.log("Block Scope cars_9 :", cars_9);
+
+    }
+
+    // e consentito richiarareun array con const, in un atlro ambito o in un altro blocco 
+    const cars_10 = ["Saab", "Volvo"]; // allowed
+    window.console.log("Global Scope cars_10 :", cars_10);
+    {
+        const cars_10 = ["BMW", "AUDI"] // allowed
+        window.console.log("Block Scope cars_10 :", cars_10);
+
+    }
+    {
+        const cars_10 = ["Toyota", "Fiat"] // allowed
+        window.console.log("Block Scope cars_10 :", cars_10);
+
+    }
 
 
 
